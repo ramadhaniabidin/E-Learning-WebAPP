@@ -21,9 +21,13 @@ app.controller('ctrl', function ($scope, svc) {
 
         if (!parent.classList.contains('slide-up')) {
             parent.classList.add('slide-up');
+           
+            
         } else {
             signUpBtn[0].parentNode.classList.add('slide-up');
             parent.classList.remove('slide-up');
+            document.getElementById('login').style.pointerEvents = "none";
+            document.getElementById('signup').style.pointerEvents = "";
         }
         
         //console.log(element.value);
@@ -54,7 +58,10 @@ app.controller('ctrl', function ($scope, svc) {
         if (!parent.classList.contains('slide-up')) {
             parent.classList.add('slide-up');
         } else {
+            
             loginBtn[0].parentNode.parentNode.classList.add('slide-up');
+            document.getElementById('login').style.pointerEvents = "";
+            document.getElementById('signup').style.pointerEvents = "none";
             parent.classList.remove('slide-up');
         }
         //angular.element(parent.classList).find((element) => {
