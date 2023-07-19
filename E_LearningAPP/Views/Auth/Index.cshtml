@@ -14,14 +14,15 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="~/css/Auth/Auth.css"/>
-
+    <script src="~/AngularJS/angular.min.js"></script>
+    <script src="~/AngularJS/angular-filter.js"></script>
+    <script src="~/AngularJS/Auth/Auth.js"></script>
     
 </head>
-<body>
+<body ng-app="app" ng-controller="ctrl">
     <div class="form-structor">
         <div class="signup">
-            <h2 class="form-title" id="signup">
-                <span>or</span>
+            <h2 class="form-title" id="signup" ng-click="handleSignUp()">
                 Sign up
             </h2>
             <div class="form-holder">
@@ -33,7 +34,9 @@
         </div>
         <div class="login slide-up">
             <div class="center">
-                <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+                <h2 class="form-title" id="login" ng-click="handleLogin()">
+                    Log in
+                </h2>
                 <div class="form-holder">
                     <input type="email" class="input" placeholder="Email" />
                     <input type="password" class="input" placeholder="Password" />
@@ -42,8 +45,10 @@
             </div>
         </div>
     </div>
+
+
 </body>
 
-<script src="~/js/Auth/Auth.js"></script>
+@*<script src="~/js/Auth/Auth.js"></script>*@
 
 </html>

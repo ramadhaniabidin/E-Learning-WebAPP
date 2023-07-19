@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\E_LearningAPP.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\Auth\\Auth.js",
+      "PackagePath": "staticwebassets\\AngularJS\\Auth\\Auth.js"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\angular-filter.js",
+      "PackagePath": "staticwebassets\\AngularJS\\angular-filter.js"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\angular.min.js",
+      "PackagePath": "staticwebassets\\AngularJS\\angular.min.js"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Auth\\Auth.css",
       "PackagePath": "staticwebassets\\css\\Auth\\Auth.css"
     },
