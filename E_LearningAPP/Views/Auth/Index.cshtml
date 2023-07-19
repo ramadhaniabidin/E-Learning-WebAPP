@@ -38,10 +38,10 @@
                     Log in
                 </h2>
                 <div class="form-holder">
-                    <input type="email" class="input" placeholder="Email" />
-                    <input type="password" class="input" placeholder="Password" />
+                    <input type="text" class="input" placeholder="Username" ng-model="login_username"/>
+                    <input type="password" class="input" placeholder="Password" ng-model="login_password"/>
                 </div>
-                <button class="submit-btn">Log in</button>
+                <button class="submit-btn" ng-click="GetAccountID()">Log in</button>
             </div>
         </div>
     </div>

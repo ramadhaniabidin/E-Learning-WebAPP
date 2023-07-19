@@ -1,6 +1,18 @@
 ﻿var app = angular.module('app', ['angular.filter']);
 
 app.service('svc', function ($http) {
+    this.svc_GetAccountID = function (username, password) {
+        var response = $http({
+            method: 'GET',
+            url: 'https://192.168.142.232:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+            data: {},
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
@@ -15,11 +27,35 @@ app.service('svc', function ($http) {
 })
 
 app.controller('ctrl', function ($scope, svc) {
+    $scope.accounts = [];
+    $scope.login_username = '';
+    $scope.login_password = '';
+
+    $scope.GetAccountID = function () {
+        var accountID;
+        console.log("Username: " + $scope.login_username);
+        console.log("Password: " + $scope.login_password);
+        var promise = svc.svc_GetAccountID($scope.login_username, $scope.login_password);
+        promise.then(function (response) {
+            accountID = response.data;
+            if ((accountID === null) || (accountID === undefined) || (accountID === 0) || (accountID === '')) {
+                alert("Login Error");
+            }
+
+            else {
+                alert("Login Success");
+            }
+            //console.log("Account ID: " + response.data);
+            //console.log($scope.accounts);
+        });
+    };
 
     $scope.GetAccounts = function () {
         var promise = svc.svc_GetAllAccounts();
         promise.then(function (response) {
-            console.log(response.data);
+            /*console.log(response.data);*/
+            $scope.accounts = response.data;
+            /*console.log($scope.accounts);*/
         });
     };
 
@@ -31,8 +67,6 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.handleLogin = function () {
         let parent = loginBtn[0].parentNode.parentNode;
         let notParent = signUpBtn[0].parentNode;
-        console.log(parent);
-        console.log(notParent);
         const element = parent.classList;
 
         if (!parent.classList.contains('slide-up')) {
@@ -50,8 +84,6 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.handleSignUp = function () {
         let parent = signUpBtn[0].parentNode;
         let notParent = loginBtn[0].parentNode;
-        console.log(parent);
-        console.log(notParent);
         if (!parent.classList.contains('slide-up')) {
             parent.classList.add('slide-up');
         } else {
