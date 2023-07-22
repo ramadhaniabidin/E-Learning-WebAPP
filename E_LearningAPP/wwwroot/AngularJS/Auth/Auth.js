@@ -45,17 +45,13 @@ app.controller('ctrl', function ($scope, svc) {
             else {
                 alert("Login Success");
             }
-            //console.log("Account ID: " + response.data);
-            //console.log($scope.accounts);
         });
     };
 
     $scope.GetAccounts = function () {
         var promise = svc.svc_GetAllAccounts();
         promise.then(function (response) {
-            /*console.log(response.data);*/
             $scope.accounts = response.data;
-            /*console.log($scope.accounts);*/
         });
     };
 
