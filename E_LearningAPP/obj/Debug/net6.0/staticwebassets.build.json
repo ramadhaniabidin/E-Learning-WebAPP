@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KqVY8IC8TgBC4Ld6w9JLV5XRMP2+4dbls/TltmJ5q4Q=",
+  "Hash": "VQGpevZdDWu8zFjLfEvsCN4TVdrfEb47sqc+QNa/r1I=",
   "Source": "E_LearningAPP",
   "BasePath": "_content/E_LearningAPP",
   "Mode": "Default",
@@ -304,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\download.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\login.avif",
+      "SourceId": "E_LearningAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
+      "BasePath": "_content/E_LearningAPP",
+      "RelativePath": "img/login.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\login.avif"
     },
     {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\math.jpg",
