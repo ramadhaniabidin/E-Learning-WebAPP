@@ -81,3 +81,22 @@ myInput.onkeyup = function () {
         length.classList.add("invalid");
     }
 }
+
+
+function validate_password() {
+    var password = document.getElementById("psw").value;
+    var confirm = document.getElementById("confirm_psw").value;
+    if (password != confirm) {
+        document.getElementById('wrong_psw_alert').style.color = 'red';
+        document.getElementById('wrong_psw_alert').innerHTML
+            = '☒ Use same password';
+        document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
+        /*document.getElementById('submit').setAttribute('disabled', 'true');*/
+        /*document.getElementById('subnit').style.opacity = (0.4);*/
+    } else {
+        document.getElementById('wrong_psw_alert').style.color = 'green';
+        document.getElementById('wrong_psw_alert').innerHTML =
+            '🗹 Password Matched';
+        /*document.getElementById('submit').removeAttribute('disabled');*/
+    }
+}

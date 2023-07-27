@@ -332,3 +332,6 @@ html, body {
     content: "✖";
 }
 
+button .submit-btn[disabled]{
+    pointer-events: none;
+}

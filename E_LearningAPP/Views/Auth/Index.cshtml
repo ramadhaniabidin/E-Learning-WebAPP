@@ -37,12 +37,13 @@
                     <p id="number" class="invalid">A <b>number</b></p>
                     <p id="length" class="invalid">Minimum <b>8 characters</b></p>
                 </div>
-                <input type="password" class="input" placeholder="Confirm Password" />
+                <input type="password" id="confirm_psw" class="input" placeholder="Confirm Password" onkeyup="validate_password()"/>
+                <span id="wrong_psw_alert"></span>
             </div>
 
 
 
-            <button class="submit-btn">Sign up</button>
+            <button class="submit-btn" id="submit">Sign up</button>
         </div>
 
 
