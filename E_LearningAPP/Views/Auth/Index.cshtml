@@ -5,6 +5,8 @@
     Layout = null;
 }
 
+@model SignUpModel;
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,12 +28,25 @@
                 Sign up
             </h2>
             <div class="form-holder">
-                <input type="text" class="input" placeholder="Name" />
-                <input type="email" class="input" placeholder="Email" />
-                <input type="password" class="input" placeholder="Password" />
+                <input type="text" class="input" placeholder="Username" />
+                <input type="password" class="input" id="psw" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
+                <div id="message">
+                    <h6>Password must contain the following:</h6>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+                <input type="password" class="input" placeholder="Confirm Password" />
             </div>
+
+
+
             <button class="submit-btn">Sign up</button>
         </div>
+
+
+
         <div class="login slide-up">
             <div class="center">
                 <h2 class="form-title" id="login" ng-click="handleLogin()">
@@ -46,6 +61,11 @@
         </div>
     </div>
 
+
+
+
+
+    <script src="~/js/Auth/Auth.js"></script>
 
 </body>
 

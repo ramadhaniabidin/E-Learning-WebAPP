@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\img\\login.avif"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\login.jpg",
+      "PackagePath": "staticwebassets\\img\\login.jpg"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\math.jpg",
       "PackagePath": "staticwebassets\\img\\math.jpg"
     },
