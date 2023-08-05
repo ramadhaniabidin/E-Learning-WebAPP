@@ -4,7 +4,7 @@ app.service('svc', function ($http) {
     this.svc_GetAccountID = function (username, password) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.142.232:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+            url: 'https://192.168.1.4:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -16,7 +16,7 @@ app.service('svc', function ($http) {
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.142.232:7290/E-LearningAPI/Account/GetAllAccounts',
+            url: 'https://192.168.1.4:7290/E-LearningAPI/Account/GetAllAccounts',
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -38,12 +38,15 @@ app.controller('ctrl', function ($scope, svc) {
         var promise = svc.svc_GetAccountID($scope.login_username, $scope.login_password);
         promise.then(function (response) {
             accountID = response.data;
+            console.log("ID Akun: ", accountID);
             if ((accountID === null) || (accountID === undefined) || (accountID === 0) || (accountID === '')) {
                 alert("Login Error");
+                
             }
 
             else {
                 alert("Login Success");
+                window.location.href = "/Home";
             }
         });
     };

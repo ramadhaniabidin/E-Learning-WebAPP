@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\E_LearningAPP.csproj": {}
+    "C:\\Users\\Bidin\\Documents\\BELAJAR\\C#\\.NET\\MVC\\E-Learning\\E-Learning-WebApp\\E_LearningAPP\\E_LearningAPP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\E_LearningAPP.csproj": {
+    "C:\\Users\\Bidin\\Documents\\BELAJAR\\C#\\.NET\\MVC\\E-Learning\\E-Learning-WebApp\\E_LearningAPP\\E_LearningAPP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\E_LearningAPP.csproj",
+        "projectUniqueName": "C:\\Users\\Bidin\\Documents\\BELAJAR\\C#\\.NET\\MVC\\E-Learning\\E-Learning-WebApp\\E_LearningAPP\\E_LearningAPP.csproj",
         "projectName": "E_LearningAPP",
-        "projectPath": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\E_LearningAPP.csproj",
-        "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\obj\\",
+        "projectPath": "C:\\Users\\Bidin\\Documents\\BELAJAR\\C#\\.NET\\MVC\\E-Learning\\E-Learning-WebApp\\E_LearningAPP\\E_LearningAPP.csproj",
+        "packagesPath": "C:\\Users\\Bidin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bidin\\Documents\\BELAJAR\\C#\\.NET\\MVC\\E-Learning\\E-Learning-WebApp\\E_LearningAPP\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bidin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
