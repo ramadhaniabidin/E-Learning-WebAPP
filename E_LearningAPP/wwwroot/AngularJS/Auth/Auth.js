@@ -31,6 +31,76 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.login_username = '';
     $scope.login_password = '';
 
+    $scope.myInput = document.getElementById("psw");
+    $scope.letter = document.getElementById("letter");
+    $scope.capital = document.getElementById("capital");
+    $scope.number = document.getElementById("number");
+    $scope.length = document.getElementById("length");
+
+    $scope.myInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+    }
+
+    $scope.myInput.onblur = function () {
+        document.getElementById("message").style.display = "none";
+    }
+
+    $scope.myInput.onkeyup = function () {
+        var lowerCaseLetters = /[a-z]/g;
+        if ($scope.myInput.value.match(lowerCaseLetters)) {
+            $scope.letter.classList.remove("invalid");
+            $scope.letter.classList.add("valid");
+        }
+        else {
+            $scope.letter.classList.remove("valid");
+            $scope.letter.classList.add("invalid");
+        }
+
+        var upperCaseLetters = /[A-Z]/g;
+        if ($scope.myInput.value.match(upperCaseLetters)) {
+            $scope.capital.classList.remove("invalid");
+            $scope.capital.classList.add("valid");
+        }
+        else {
+            $scope.capital.classList.remove("valid");
+            $scope.capital.classList.add("invalid");
+        }
+
+        var numbers = /[0-9]/g;
+        if ($scope.myInput.value.match(numbers)) {
+            $scope.number.classList.remove("invalid");
+            $scope.number.classList.add("valid");
+        }
+        else {
+            $scope.number.classList.remove("valid");
+            $scope.number.classList.add("invalid");
+        }
+
+        if ($scope.myInput.value.length >= 8) {
+            $scope.length.classList.remove("invalid");
+            $scope.length.classList.add("valid");
+        } else {
+            $scope.length.classList.remove("valid");
+            $scope.length.classList.add("invalid");
+        }
+    }
+
+    $scope.validate_password = function () {
+        var password = document.getElementById("psw").value;
+        var confirm = document.getElementById("confirm_psw").value;
+
+        if (password !== confirm) {
+            document.getElementById("wrong_psw_alert").style.color = "red";
+            document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
+            document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
+        }
+
+        else {
+            document.getElementById('wrong_psw_alert').style.color = 'green';
+            document.getElementById('wrong_psw_alert').innerHTML = '🗹 Password Matched';
+        }
+    }
+
     $scope.GetAccountID = function () {
         var accountID;
         console.log("Username: " + $scope.login_username);
