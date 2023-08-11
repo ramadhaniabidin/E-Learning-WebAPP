@@ -33,6 +33,7 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.SignUp_Username = "";
     $scope.SignUp_Password = "";
     $scope.Confirm_Password = "";
+    $scope.AccountType = "";
 
     $scope.myInput = document.getElementById("psw");
     $scope.letter = document.getElementById("letter");
@@ -207,4 +208,9 @@ app.controller('ctrl', function ($scope, svc) {
 
 
     $scope.GetAccounts();
+    $scope.$watch('AccountType', function (newVal, oldVal) {
+        if (newVal) {
+            console.log("Account type: ", newVal);
+        }
+    });
 })
