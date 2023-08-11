@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mdqCxYGH6kLAjE//m1qE9/OHeoJ8aQLfEOgDYSYiJBM=",
+  "Hash": "K1lPaknltiDCboEzPTqZVXljKvNpCEWeLIwlJvandfA=",
   "Source": "E_LearningAPP",
   "BasePath": "_content/E_LearningAPP",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Auth\\Auth.css"
+    },
+    {
+      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Auth\\latis.css",
+      "SourceId": "E_LearningAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
+      "BasePath": "_content/E_LearningAPP",
+      "RelativePath": "css/Auth/latis.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Auth\\latis.css"
     },
     {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\bootstrap\\bootstrap.min.css",

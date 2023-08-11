@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\Auth\\Auth.css"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Auth\\latis.css",
+      "PackagePath": "staticwebassets\\css\\Auth\\latis.css"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Home\\Home.css",
       "PackagePath": "staticwebassets\\css\\Home\\Home.css"
     },

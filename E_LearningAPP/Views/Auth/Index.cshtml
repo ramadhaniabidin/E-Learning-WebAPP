@@ -16,67 +16,108 @@
     <title>Login/Sign Up</title>
 
     <link rel="stylesheet" href="~/css/Auth/Auth.css"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/Auth/latis.css"/>
     <script src="~/AngularJS/angular.min.js"></script>
     <script src="~/AngularJS/angular-filter.js"></script>
     <script src="~/AngularJS/Auth/Auth.js"></script>
     
 </head>
 <body ng-app="app" ng-controller="ctrl">
-    <div class="form-structor">
-        <div class="signup">
-            <h2 class="form-title" id="signup" ng-click="handleSignUp()">
-                Sign up
-            </h2>
-            <div class="form-holder">
-                <input type="text" class="input" placeholder="Username" ng-model="SignUp_Username"/>
-                <div id="password_field" style="display: flex">
-                    <input type="password" class="input" id="psw" placeholder="Password" ng-model="SignUp_Password"/>
-                    <svg id="svg1" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
-                        <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
-                        <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
-                        <circle cx="50" cy="50" r="10" fill="black"></circle>
-                    </svg>
+    <div class="row" style="justify-content:center">
+        <div class="col-5">
+            <div class="form-structor">
+                <div class="signup">
+                    <h2 class="form-title" id="signup" ng-click="handleSignUp()">
+                        Sign up
+                    </h2>
+                    <div class="form-holder">
+                        <input type="text" class="input" placeholder="Username" ng-model="SignUp_Username" />
+                        <div id="password_field" style="display: flex">
+                            <input type="password" class="input" id="psw" placeholder="Password" ng-model="SignUp_Password" />
+                            <svg id="svg1" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
+                                <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
+                                <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
+                                <circle cx="50" cy="50" r="10" fill="black"></circle>
+                            </svg>
+                        </div>
+
+                        <div id="message">
+                            <h6>Password must contain the following:</h6>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="password" id="confirm_psw" ng-model="Confirm_Password" class="input" placeholder="Confirm Password" />
+                            <svg id="svg2" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
+                                <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
+                                <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
+                                <circle cx="50" cy="50" r="10" fill="black"></circle>
+                            </svg>
+                        </div>
+
+                        <span id="wrong_psw_alert"></span>
+                    </div>
+
+
+
+                    <button class="submit-btn" id="submit">Sign up</button>
                 </div>
 
-                <div id="message">
-                    <h6>Password must contain the following:</h6>
-                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                    <p id="number" class="invalid">A <b>number</b></p>
-                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+
+
+                <div class="login slide-up">
+                    <div class="center">
+                        <h2 class="form-title" id="login" ng-click="handleLogin()">
+                            Log in
+                        </h2>
+                        <div class="form-holder">
+                            <input type="text" class="input" placeholder="Username" ng-model="login_username" />
+                            <input type="password" class="input" placeholder="Password" ng-model="login_password" />
+                        </div>
+                        <button class="submit-btn" ng-click="GetAccountID()">Log in</button>
+                    </div>
                 </div>
-                <div style="display: flex;">
-                    <input type="password" id="confirm_psw" ng-model="Confirm_Password" class="input" placeholder="Confirm Password" />
-                    <svg id="svg2" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
-                        <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
-                        <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
-                        <circle cx="50" cy="50" r="10" fill="black"></circle>
-                    </svg>
-                </div>
-                
-                <span id="wrong_psw_alert"></span>
             </div>
-
-
-
-            <button class="submit-btn" id="submit">Sign up</button>
         </div>
-
-
-
-        <div class="login slide-up">
-            <div class="center">
-                <h2 class="form-title" id="login" ng-click="handleLogin()">
-                    Log in
-                </h2>
-                <div class="form-holder">
-                    <input type="text" class="input" placeholder="Username" ng-model="login_username"/>
-                    <input type="password" class="input" placeholder="Password" ng-model="login_password"/>
+        <div class="col-5">
+            <div class="card-auth">
+                <div class="container">
+                    <div id="formlogin" style="padding-top: 30%">
+                        <div class="row" style="justify-content: center">
+                            <h5 class="rubik mt-3" style="text-align:center">Pilih tipe akun Anda !</h5>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="customRadio" class="radio siswa">
+                                    <input type="radio" name="siswatutor" value="siswa" id="customRadio" class="tutorsiswa" checked>
+                                    <div class="card-input">
+                                        <img class="img-fluid" src="https://login.latiseducation.com/assets/img/Illustration/Siswa.png" alt="Siswa">
+                                        <h6 class="text-center rubik mt-2">Siswa</h6>
+                                        <img class="img-fluid checked" width="60" src="https://login.latiseducation.com/assets/img/Icon/checked.png" hidden>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col">
+                                <label for="customRadio1" class="radio tutor">
+                                    <input type="radio" name="siswatutor" value="tutor" id="customRadio1" class="tutorsiswa">
+                                    <div class="card-input">
+                                        <img class="img-fluid" src="https://login.latiseducation.com/assets/img/Illustration/Guru.png" alt="Tutor">
+                                        <h6 class="text-center rubik mt-2">Tutor</h6>
+                                        <img class="img-fluid checked" width="60" src="https://login.latiseducation.com/assets/img/Icon/checked.png" hidden>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mt-4" id="pesan-login">&nbsp;</div>
+                    </div>
                 </div>
-                <button class="submit-btn" ng-click="GetAccountID()">Log in</button>
             </div>
         </div>
     </div>
+    
 
 
 

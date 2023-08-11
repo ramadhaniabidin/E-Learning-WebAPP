@@ -4,7 +4,7 @@
 html, body {
     position: relative;
     min-height: 100vh;
-    background-color: #E1E8EE;
+    background-color: #E1E8EE !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@ html, body {
     background-color: #222;
     border-radius: 15px;
     height: 550px;
-    width: 350px;
+    width: 400px;
     position: relative;
     overflow: hidden;
     &::after
