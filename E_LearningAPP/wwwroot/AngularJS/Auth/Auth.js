@@ -30,6 +30,9 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.accounts = [];
     $scope.login_username = '';
     $scope.login_password = '';
+    $scope.SignUp_Username = "";
+    $scope.SignUp_Password = "";
+    $scope.Confirm_Password = "";
 
     $scope.myInput = document.getElementById("psw");
     $scope.letter = document.getElementById("letter");
@@ -106,7 +109,7 @@ app.controller('ctrl', function ($scope, svc) {
     }
 
     $scope.confirm.onkeyup = function () {
-        if ($scope.myInput.value != $scope.confirm.value) {
+        if ($scope.SignUp_Password != $scope.Confirm_Password) {
             document.getElementById("wrong_psw_alert").style.color = "red";
             document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
             document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
@@ -114,6 +117,7 @@ app.controller('ctrl', function ($scope, svc) {
         else {
             document.getElementById('wrong_psw_alert').style.color = 'green';
             document.getElementById('wrong_psw_alert').innerHTML = '🗹 Password Matched';
+            
         }
     }
 

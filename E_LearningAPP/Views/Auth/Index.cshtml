@@ -28,9 +28,9 @@
                 Sign up
             </h2>
             <div class="form-holder">
-                <input type="text" class="input" placeholder="Username" />
+                <input type="text" class="input" placeholder="Username" ng-model="SignUp_Username"/>
                 <div id="password_field" style="display: flex">
-                    <input type="password" class="input" id="psw" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
+                    <input type="password" class="input" id="psw" placeholder="Password" ng-model="SignUp_Password"/>
                     <svg id="svg1" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
                         <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
                         <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
@@ -46,7 +46,7 @@
                     <p id="length" class="invalid">Minimum <b>8 characters</b></p>
                 </div>
                 <div style="display: flex;">
-                    <input type="password" id="confirm_psw" class="input" placeholder="Confirm Password" />
+                    <input type="password" id="confirm_psw" ng-model="Confirm_Password" class="input" placeholder="Confirm Password" />
                     <svg id="svg2" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
                         <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
                         <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
