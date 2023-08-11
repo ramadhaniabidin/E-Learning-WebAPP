@@ -36,6 +36,26 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.capital = document.getElementById("capital");
     $scope.number = document.getElementById("number");
     $scope.length = document.getElementById("length");
+    $scope.confirm = document.getElementById("confirm_psw");
+    $scope.password_field = document.getElementById("password_field");
+
+    $scope.svg1 = document.getElementById("svg1");
+    $scope.svg2 = document.getElementById("svg2");
+
+
+    $scope.svg1.addEventListener("click", function () {
+        this.classList.toggle("close");
+        setTimeout(() => {
+            $scope.myInput.type = $scope.myInput.type === "password" ? "text" : "password";
+        }, 125);
+    });
+
+    $scope.svg2.addEventListener("click", function () {
+        this.classList.toggle("close");
+        setTimeout(() => {
+            $scope.confirm.type = $scope.confirm.type === "password" ? "text" : "password";
+        }, 125);
+    });
 
     $scope.myInput.onfocus = function () {
         document.getElementById("message").style.display = "block";
@@ -85,21 +105,41 @@ app.controller('ctrl', function ($scope, svc) {
         }
     }
 
-    $scope.validate_password = function () {
-        var password = document.getElementById("psw").value;
-        var confirm = document.getElementById("confirm_psw").value;
-
-        if (password !== confirm) {
+    $scope.confirm.onkeyup = function () {
+        if ($scope.myInput.value != $scope.confirm.value) {
             document.getElementById("wrong_psw_alert").style.color = "red";
             document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
             document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
         }
-
         else {
             document.getElementById('wrong_psw_alert').style.color = 'green';
             document.getElementById('wrong_psw_alert').innerHTML = '🗹 Password Matched';
         }
     }
+
+    $scope.confirm.onblur = function () {
+        document.getElementById("wrong_psw_alert").style.display = "none";
+    }
+
+    $scope.confirm.onfocus = function () {
+        document.getElementById("wrong_psw_alert").style.display = "block";
+    }
+
+    //$scope.validate_password = function () {
+    //    var password = document.getElementById("psw").value;
+    //    var confirm = document.getElementById("confirm_psw").value;
+
+    //    if (password !== confirm) {
+    //        document.getElementById("wrong_psw_alert").style.color = "red";
+    //        document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
+    //        document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
+    //    }
+
+    //    else {
+    //        document.getElementById('wrong_psw_alert').style.color = 'green';
+    //        document.getElementById('wrong_psw_alert').innerHTML = '🗹 Password Matched';
+    //    }
+    //}
 
     $scope.GetAccountID = function () {
         var accountID;
