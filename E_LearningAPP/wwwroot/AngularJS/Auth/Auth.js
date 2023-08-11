@@ -113,7 +113,8 @@ app.controller('ctrl', function ($scope, svc) {
         if ($scope.SignUp_Password != $scope.Confirm_Password) {
             document.getElementById("wrong_psw_alert").style.color = "red";
             document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
-            document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
+            //document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
+            document.getElementById("wrong_psw_alert").style.textAlign = "center";
         }
         else {
             document.getElementById('wrong_psw_alert').style.color = 'green';
