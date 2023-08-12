@@ -1,10 +1,23 @@
 ﻿var app = angular.module('app', ['angular.filter']);
 
+app.config(['$httpProvider', function ($httpProvider) {
+    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+    $httpProvider.defaults.transformRequest = function (data) {
+        if (data === undefined) {
+            return data;
+        }
+        return JSON.stringify(data, function (key, value) {
+            return (typeof value === 'string') ? value : value;
+        });
+    };
+}]);
+
+
 app.service('svc', function ($http) {
     this.svc_GetAccountID = function (username, password) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.142.232:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -16,8 +29,26 @@ app.service('svc', function ($http) {
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.142.232:7290/E-LearningAPI/Account/GetAllAccounts',
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetAllAccounts',
             data: {},
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
+    this.svc_CreateAccount = function (account) {
+        var param = {
+            account: account
+        };
+
+        console.log("Param: ", param);
+
+        var response = $http({
+            method: 'POST',
+            url: 'https://192.168.1.3:7290/E-learningAPI/Account/CreateAccount',
+            data: account,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
         });
@@ -131,22 +162,6 @@ app.controller('ctrl', function ($scope, svc) {
         document.getElementById("wrong_psw_alert").style.display = "block";
     }
 
-    //$scope.validate_password = function () {
-    //    var password = document.getElementById("psw").value;
-    //    var confirm = document.getElementById("confirm_psw").value;
-
-    //    if (password !== confirm) {
-    //        document.getElementById("wrong_psw_alert").style.color = "red";
-    //        document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
-    //        document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
-    //    }
-
-    //    else {
-    //        document.getElementById('wrong_psw_alert').style.color = 'green';
-    //        document.getElementById('wrong_psw_alert').innerHTML = '🗹 Password Matched';
-    //    }
-    //}
-
     $scope.GetAccountID = function () {
         var accountID;
         console.log("Username: " + $scope.login_username);
@@ -160,6 +175,7 @@ app.controller('ctrl', function ($scope, svc) {
 
             else {
                 alert("Login Success");
+                location.href = "/Home";
             }
         });
     };
@@ -168,10 +184,71 @@ app.controller('ctrl', function ($scope, svc) {
         var promise = svc.svc_GetAllAccounts();
         promise.then(function (response) {
             $scope.accounts = response.data;
+            console.log("Accounts: ", $scope.accounts);
         });
+
+        
     };
 
 
+    function formatDate(date) {
+        var year = date.getFullYear();
+        var month = String(date.getMonth() + 1).padStart(2, '0');
+        var day = String(date.getDate()).padStart(2, '0');
+        var hours = String(date.getHours()).padStart(2, '0');
+        var minutes = String(date.getMinutes()).padStart(2, '0');
+        var seconds = String(date.getSeconds()).padStart(2, '0');
+
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
+
+    $scope.SignUp = function () {
+        var role_id = 0;
+        if ($scope.AccountType == "siswa") {
+            role_id = 1;
+        }
+
+        else {
+            role_id = 2;
+        }
+
+        if (($scope.AccountType == null) || ($scope.AccountType == undefined) || ($scope.AccountType == "")) {
+            alert("Choose the account type!");
+        }
+
+        else {
+            console.log("Username: ", $scope.SignUp_Username);
+            console.log("Password: ", $scope.SignUp_Password);
+            console.log("Account Type: ", $scope.AccountType);
+            console.log("Register Date: ", new Date().toLocaleDateString());
+            console.log("Role ID: ", role_id);
+        }
+
+        var param = {
+            account: {
+                'username': $scope.SignUp_Username,
+                'password': $scope.SignUp_Password,
+                'tanggal_daftar': new Date().toISOString(),
+                'id_peran': role_id
+            }
+        };
+            
+
+        var promise = svc.svc_CreateAccount(param.account);
+        promise.then(function (response) {
+            var resp_data = response.data;
+            console.log("Response data: ", resp_data);
+            if (resp_data.ProcessSuccess) {
+                alert(resp_data.InfoMessage.toString() + ", Logging you in");
+                location.href = "/Home";
+            }
+
+            else {
+                alert(resp_data.InfoMessage.toString());
+                window.location.href = "/";
+            }
+        });
+    }
 
     const loginBtn = angular.element(document.getElementById('login'));
     const signUpBtn = angular.element(document.getElementById('signup'));
@@ -209,9 +286,9 @@ app.controller('ctrl', function ($scope, svc) {
 
 
     $scope.GetAccounts();
-    $scope.$watch('AccountType', function (newVal, oldVal) {
-        if (newVal) {
-            console.log("Account type: ", newVal);
-        }
-    });
+    //$scope.$watch('AccountType', function (newVal, oldVal) {
+    //    if (newVal) {
+    //        console.log("Account type: ", newVal);
+    //    }
+    //});
 })
