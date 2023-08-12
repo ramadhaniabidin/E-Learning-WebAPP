@@ -26,6 +26,18 @@ app.service('svc', function ($http) {
         return response;
     }
 
+    this.svc_GetAccountByUsername = function (username) {
+        var response = $http({
+            method: 'GET',
+            url: 'https://192.168.1.3:7290/E-learningAPI/Account/GetAccountByUsername/username/' + encodeURIComponent(username),
+            data: {},
+            contentType: 'aplication/json charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
@@ -65,6 +77,8 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.SignUp_Password = "";
     $scope.Confirm_Password = "";
     $scope.AccountType = "";
+    $scope.ResetPassword_Username = "";
+    $scope.IsUsernameValid = false;
 
     $scope.myInput = document.getElementById("psw");
     $scope.letter = document.getElementById("letter");
@@ -179,6 +193,32 @@ app.controller('ctrl', function ($scope, svc) {
             }
         });
     };
+
+    $scope.ToggleModal = function () {
+        document.getElementById('my_modal_1').style.display = 'none';
+        document.getElementById('reset_psw_modal').style.display = 'block';
+    }
+
+    $scope.GetAccountByUsername = function () {
+        if (($scope.ResetPassword_Username == null) || ($scope.ResetPassword_Username == undefined) || ($scope.ResetPassword_Username == '')) {
+            alert('Please insert your username');
+        }
+        else {
+            var promise = svc.svc_GetAccountByUsername($scope.ResetPassword_Username);
+            promise.then(function (response) {
+                var resp_data = response.data;
+                console.log('Response data: ', response.data);
+                if (resp_data.ProcessSuccess) {
+                    alert(resp_data.InfoMessage);
+                    $scope.ToggleModal();
+                }
+
+                else {
+                    alert(resp_data.InfoMessage);
+                }
+            });
+        }
+    }
 
     $scope.GetAccounts = function () {
         var promise = svc.svc_GetAllAccounts();

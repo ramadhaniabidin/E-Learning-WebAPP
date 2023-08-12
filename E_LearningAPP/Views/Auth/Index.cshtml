@@ -27,7 +27,7 @@
     <dialog id="my_modal_1" class="my-modal">
         <div class="modal-content" style="padding-bottom: 0px; padding-top: 0px">
             <div class="modal-header" style="display:flex">
-                <h5 style="margin-bottom: 0px">Reset your password</h5>
+                <h5 style="margin-bottom: 0px">Check your account</h5>
                 <span class="close-modal" onclick="document.getElementById('my_modal_1').style.display = 'none'">&times;</span>
             </div>
             <div class="modal-body">
@@ -36,15 +36,41 @@
                 </div>
                 
                 <div>
-                    <input type="text" placeholder="username" style="border-radius: 10px; text-align:center; width: 100%"/>
+                    <input type="text" placeholder="username" style="border-radius: 10px; text-align:center; width: 100%" ng-model="ResetPassword_Username"/>
                 </div>
                 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary">Reset passsword</button>
-                <button class="btn btn-primary" onclick="document.getElementById('my_modal_1').style.display = 'none'">Close</button>
+                <button class="btn btn-primary" ng-click="GetAccountByUsername()">Check Account</button>
+                <button class="btn btn-danger" onclick="document.getElementById('my_modal_1').style.display = 'none'">Close</button>
             </div>
             
+        </div>
+    </dialog>
+
+    <dialog id="reset_psw_modal" class="my-modal">
+        <div class="modal-content" style="padding-bottom: 0px; padding-top: 0px">
+            <div class="modal-header" style="display:flex">
+                <h5 style="margin-bottom: 0px">Reset your password</h5>
+                <span class="close-modal" onclick="document.getElementById('reset_psw_modal').style.display = 'none'">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div style="padding-bottom: 2%">
+                    <label class="control-label">Type your new password</label>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="password" style="border-radius: 10px; text-align:center; width: 100%"/>
+                    <br /><br />
+                    <input type="text" placeholder="confirm password" style="border-radius: 10px; text-align:center; width: 100%" />
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="GetAccountByUsername()">Reset password</button>
+                <button class="btn btn-danger" onclick="document.getElementById('reset_psw_modal').style.display = 'none'">Close</button>
+            </div>
+
         </div>
     </dialog>
 
