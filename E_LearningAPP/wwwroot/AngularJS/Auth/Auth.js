@@ -284,6 +284,9 @@ app.controller('ctrl', function ($scope, svc) {
         }
     }
 
+    $scope.ShowModal = function () {
+        document.getElementById("my_modal_1").style.display = "block";
+    }
 
     $scope.GetAccounts();
     //$scope.$watch('AccountType', function (newVal, oldVal) {

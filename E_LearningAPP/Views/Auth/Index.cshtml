@@ -24,6 +24,31 @@
     
 </head>
 <body ng-app="app" ng-controller="ctrl">
+    <dialog id="my_modal_1" class="my-modal">
+        <div class="modal-content" style="padding-bottom: 0px; padding-top: 0px">
+            <div class="modal-header" style="display:flex">
+                <h5 style="margin-bottom: 0px">Reset your password</h5>
+                <span class="close-modal" onclick="document.getElementById('my_modal_1').style.display = 'none'">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div style="padding-bottom: 2%">
+                    <label class="control-label">Type your username</label>
+                </div>
+                
+                <div>
+                    <input type="text" placeholder="username" style="border-radius: 10px; text-align:center; width: 100%"/>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary">Reset passsword</button>
+                <button class="btn btn-primary" onclick="document.getElementById('my_modal_1').style.display = 'none'">Close</button>
+            </div>
+            
+        </div>
+    </dialog>
+
+
     <div class="row" style="justify-content:center">
         <div class="col-5">
             <div class="form-structor">
@@ -87,16 +112,16 @@
                 <div class="container">
                     <div id="formlogin" style="padding-top: 30%">
                         <div class="row" style="justify-content: center">
-                            <h5 class="rubik mt-3" style="text-align:center">Pilih tipe akun Anda !</h5>
+                            <h5 class="rubik mt-3" style="text-align:center">Select the account type !</h5>
                         </div>
                         <div class="row mt-2">
                             <div class="col">
                                 <label for="customRadio" class="radio siswa">
                                     <input type="radio" name="siswatutor" value="siswa" id="customRadio" class="tutorsiswa" checked ng-model="AccountType">
                                     <div class="card-input">
-                                        <img class="img-fluid" src="https://login.latiseducation.com/assets/img/Illustration/Siswa.png" alt="Siswa">
-                                        <h6 class="text-center rubik mt-2">Siswa</h6>
-                                        <img class="img-fluid checked" width="60" src="https://login.latiseducation.com/assets/img/Icon/checked.png" hidden>
+                                        <img class="img-fluid" src="~/img/Siswa.png" alt="Siswa">
+                                        <h6 class="text-center rubik mt-2">Student</h6>
+                                        <img class="img-fluid checked" width="60" src="~/img/checked.png" hidden>
                                     </div>
                                 </label>
                             </div>
@@ -104,12 +129,15 @@
                                 <label for="customRadio1" class="radio tutor">
                                     <input type="radio" name="siswatutor" value="tutor" id="customRadio1" class="tutorsiswa" ng-model="AccountType">
                                     <div class="card-input">
-                                        <img class="img-fluid" src="https://login.latiseducation.com/assets/img/Illustration/Guru.png" alt="Tutor">
-                                        <h6 class="text-center rubik mt-2">Tutor</h6>
-                                        <img class="img-fluid checked" width="60" src="https://login.latiseducation.com/assets/img/Icon/checked.png" hidden>
+                                        <img class="img-fluid" src="~/img/Guru.png" alt="Tutor">
+                                        <h6 class="text-center rubik mt-2">Teacher</h6>
+                                        <img class="img-fluid checked" width="60" src="~/img/checked.png" hidden>
                                     </div>
                                 </label>
                             </div>
+                        </div>
+                        <div class="text-center mt-3 nunito">
+                            <h6 style="font-weight: 600;">Forgot Password ? <a href="#" class="a-join" id="btn-reset" ng-click="ShowModal()">Reset password</a></h6>
                         </div>
                         <div class="mt-4" id="pesan-login">&nbsp;</div>
                     </div>

@@ -61,6 +61,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\Guru.png",
+      "PackagePath": "staticwebassets\\img\\Guru.png"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\Siswa.png",
+      "PackagePath": "staticwebassets\\img\\Siswa.png"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\checked.png",
+      "PackagePath": "staticwebassets\\img\\checked.png"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\chemistry.jpg",
       "PackagePath": "staticwebassets\\img\\chemistry.jpg"
     },
@@ -103,6 +115,10 @@
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\lib\\DaisyUI\\DaisyUIFull.css",
+      "PackagePath": "staticwebassets\\lib\\DaisyUI\\DaisyUIFull.css"
     },
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\lib\\bootstrap\\LICENSE",
