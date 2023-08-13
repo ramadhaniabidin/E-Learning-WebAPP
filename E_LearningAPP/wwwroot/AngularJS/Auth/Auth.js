@@ -270,18 +270,43 @@ app.controller('ctrl', function ($scope, svc) {
         var accountID;
         console.log("Username: " + $scope.login_username);
         console.log("Password: " + $scope.login_password);
-        var promise = svc.svc_GetAccountID($scope.login_username, $scope.login_password);
-        promise.then(function (response) {
-            accountID = response.data;
-            if ((accountID === null) || (accountID === undefined) || (accountID === 0) || (accountID === '')) {
-                alert("Login Error");
-            }
 
-            else {
-                alert("Login Success");
-                location.href = "/Home";
-            }
-        });
+        var cond1 = ($scope.login_username == null) || ($scope.login_username == undefined) || ($scope.login_username == '');
+        var cond2 = ($scope.login_password == null) || ($scope.login_password == undefined) || ($scope.login_password == '');
+        var cond3 = ($scope.AccountType == null) || ($scope.AccountType == undefined) || ($scope.AccountType == "")
+
+        if (cond1 && cond2 && cond3) {
+            alert('Please insert your username, password and select your account type');
+        }
+
+        else if (cond1) {
+            alert('Please insert your username');
+        }
+
+        else if (cond2) {
+            alert('Please insert your password');
+        }
+
+        else if (cond3) {
+            alert('Please select your account type');
+        }
+
+        else {
+            var promise = svc.svc_GetAccountID($scope.login_username, $scope.login_password);
+            promise.then(function (response) {
+                accountID = response.data;
+                if ((accountID === null) || (accountID === undefined) || (accountID === 0) || (accountID === '')) {
+                    alert("Login Error");
+                }
+
+                else {
+                    alert("Login Success");
+                    location.href = "/Home";
+                }
+            });
+        }
+
+
     };
 
     $scope.ToggleModal = function () {
@@ -378,7 +403,7 @@ app.controller('ctrl', function ($scope, svc) {
                 }
             };
 
-
+            q
             var promise = svc.svc_CreateAccount(param.account);
             promise.then(function (response) {
                 var resp_data = response.data;
