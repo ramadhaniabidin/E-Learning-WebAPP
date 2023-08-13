@@ -429,6 +429,8 @@ app.controller('ctrl', function ($scope, svc) {
         let notParent = signUpBtn[0].parentNode;
         const element = parent.classList;
 
+        document.getElementById('is_user_forgot_password').style.display = 'block';
+
         if (!parent.classList.contains('slide-up')) {
             parent.classList.add('slide-up');
            
@@ -444,10 +446,15 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.handleSignUp = function () {
         let parent = signUpBtn[0].parentNode;
         let notParent = loginBtn[0].parentNode;
+        document.getElementById('is_user_forgot_password').style.display = 'none';
+
         if (!parent.classList.contains('slide-up')) {
             parent.classList.add('slide-up');
-        } else {
-            
+            //document.getElementById('is_user_forgot_password').style.display = 'none';
+        }
+
+        else {
+            //document.getElementById('is_user_forgot_password').style.display = 'block';
             loginBtn[0].parentNode.parentNode.classList.add('slide-up');
             document.getElementById('login').style.pointerEvents = "";
             document.getElementById('signup').style.pointerEvents = "none";
