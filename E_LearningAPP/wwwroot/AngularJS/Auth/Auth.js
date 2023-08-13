@@ -403,7 +403,7 @@ app.controller('ctrl', function ($scope, svc) {
                 }
             };
 
-            q
+            
             var promise = svc.svc_CreateAccount(param.account);
             promise.then(function (response) {
                 var resp_data = response.data;
