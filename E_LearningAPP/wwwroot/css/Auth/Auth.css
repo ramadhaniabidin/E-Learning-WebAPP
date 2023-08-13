@@ -412,3 +412,9 @@ svg path{
     text-decoration: none;
     cursor: pointer;
 }
+
+.reset-password {
+    border-radius: 5px;
+    text-align: center;
+    width: 100%
+}

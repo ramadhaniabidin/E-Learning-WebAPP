@@ -38,6 +38,18 @@ app.service('svc', function ($http) {
         return response;
     }
 
+    this.svc_UpdatePassword = function (username, password) {
+        var response = $http({
+            method: 'POST',
+            url: 'https://192.168.1.3:7290/E-learningAPI/Account/UpdatePassword/username/' + encodeURIComponent(username) + '/newPassword/' + encodeURIComponent(password),
+            data: {},
+            contentType: 'application/json charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
@@ -78,7 +90,9 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.Confirm_Password = "";
     $scope.AccountType = "";
     $scope.ResetPassword_Username = "";
+    $scope.ResetPassword = "";
     $scope.IsUsernameValid = false;
+    $scope.Confirm_Password_Reset = "";
 
     $scope.myInput = document.getElementById("psw");
     $scope.letter = document.getElementById("letter");
@@ -105,6 +119,60 @@ app.controller('ctrl', function ($scope, svc) {
             $scope.confirm.type = $scope.confirm.type === "password" ? "text" : "password";
         }, 125);
     });
+    
+
+    $scope.CheckPassword = function () {
+        var lowerCaseLetters = /[a-z]/g;
+        if ($scope.ResetPassword.match(lowerCaseLetters)) {
+            document.getElementById("letter1").classList.remove("invalid");
+            document.getElementById("letter1").classList.add("valid");
+        }
+
+        else {
+            document.getElementById("letter1").classList.remove("valid");
+            document.getElementById("letter1").classList.add("invalid");
+        }
+
+        var upperCaseLetters = /[A-Z]/g;
+        if ($scope.ResetPassword.match(upperCaseLetters)) {
+            document.getElementById("capital1").classList.remove("invalid");
+            document.getElementById("capital1").classList.add("valid");
+        }
+
+        else {
+            document.getElementById("capital1").classList.remove("valid");
+            document.getElementById("capital1").classList.add("invalid");
+        }
+
+        var numbers = /[0-9]/g;
+        if ($scope.ResetPassword.match(numbers)) {
+            document.getElementById("number1").classList.remove("invalid");
+            document.getElementById("number1").classList.add("valid");
+        }
+
+        else {
+            document.getElementById("number1").classList.remove("valid");
+            document.getElementById("number1").classList.add("invalid");
+        }
+
+        if ($scope.ResetPassword.length >= 8) {
+            document.getElementById("length1").classList.remove("invalid");
+            document.getElementById("length1").classList.add("valid");
+        }
+
+        else {
+            document.getElementById("length1").classList.remove("valid");
+            document.getElementById("length1").classList.add("invalid");
+        }
+    }
+
+    $scope.OnInputFocus = function () {
+        document.getElementById("message1").style.display = "block";
+    }
+
+    $scope.OffInputFocus = function () {
+        document.getElementById("message1").style.display = "none";
+    }
 
     $scope.myInput.onfocus = function () {
         document.getElementById("message").style.display = "block";
@@ -154,12 +222,34 @@ app.controller('ctrl', function ($scope, svc) {
         }
     }
 
+    $scope.MatchPassword = function () {
+        if (($scope.ResetPassword != $scope.Confirm_Password_Reset) || ($scope.Confirm_Password_Reset == null) || ($scope.Confirm_Password_Reset == '')) {
+            document.getElementById('password_mismatch_alert').style.color = "red";
+            document.getElementById('password_mismatch_alert').innerHTML = "☒ Use same password";
+            document.getElementById('password_mismatch_alert').style.textAlign = "center";
+        }
+
+        else {
+            document.getElementById('password_mismatch_alert').style.color = 'green';
+            document.getElementById('password_mismatch_alert').innerHTML = '🗹 Password Matched';
+        }
+    }
+
+    $scope.ConfirmPswFocus = function () {
+        document.getElementById("password_mismatch_alert").style.display = "block";
+    }
+
+    $scope.ConfirmPswBlur = function () {
+        document.getElementById("password_mismatch_alert").style.display = "none";
+    }
+
     $scope.confirm.onkeyup = function () {
         if ($scope.SignUp_Password != $scope.Confirm_Password) {
             document.getElementById("wrong_psw_alert").style.color = "red";
             document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
             //document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
             document.getElementById("wrong_psw_alert").style.textAlign = "center";
+            
         }
         else {
             document.getElementById('wrong_psw_alert').style.color = 'green';
@@ -226,10 +316,26 @@ app.controller('ctrl', function ($scope, svc) {
             $scope.accounts = response.data;
             console.log("Accounts: ", $scope.accounts);
         });
-
-        
     };
 
+
+    $scope.UpdatePassword = function () {
+        console.log('Username: ', $scope.ResetPassword_Username);
+        console.log('New Password: ', $scope.ResetPassword);
+
+        var promise = svc.svc_UpdatePassword($scope.ResetPassword_Username, $scope.ResetPassword);
+        promise.then(function (response) {
+            var resp_data = response.data;
+            if (resp_data.ProcessSuccess) {
+                alert(resp_data.InfoMessage);
+                location.href = "/";
+            }
+
+            else {
+                alert(resp_data.InfoMessage);
+            }
+        });
+    }
 
     function formatDate(date) {
         var year = date.getFullYear();

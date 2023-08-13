@@ -60,14 +60,22 @@
                 </div>
 
                 <div>
-                    <input type="text" placeholder="password" style="border-radius: 10px; text-align:center; width: 100%"/>
+                    <input id="reset_psw_field" ng-focus="OnInputFocus()" ng-blur="OffInputFocus()" class="reset-password" ng-model="ResetPassword" ng-keyup="CheckPassword()" type="password" placeholder="password"/>
+                    <div id="message1" style="padding-left: 25%; padding-top: 5px">
+                        <h6>Password must contain the following:</h6>
+                        <p id="letter1" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital1" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number1" class="invalid">A <b>number</b></p>
+                        <p id="length1" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
                     <br /><br />
-                    <input type="text" placeholder="confirm password" style="border-radius: 10px; text-align:center; width: 100%" />
+                    <input type="password" placeholder="confirm password" class="reset-password" ng-model="Confirm_Password_Reset" ng-keyup="MatchPassword()" ng-focus="ConfirmPswFocus()" ng-blur="ConfirmPswBlur()"/>
+                    <span id="password_mismatch_alert"></span>
                 </div>
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" ng-click="GetAccountByUsername()">Reset password</button>
+                <button class="btn btn-primary" ng-click="UpdatePassword()">Reset password</button>
                 <button class="btn btn-danger" onclick="document.getElementById('reset_psw_modal').style.display = 'none'">Close</button>
             </div>
 
