@@ -368,32 +368,32 @@ app.controller('ctrl', function ($scope, svc) {
             console.log("Account Type: ", $scope.AccountType);
             console.log("Register Date: ", new Date().toLocaleDateString());
             console.log("Role ID: ", role_id);
+
+            var param = {
+                account: {
+                    'username': $scope.SignUp_Username,
+                    'password': $scope.SignUp_Password,
+                    'tanggal_daftar': new Date().toISOString(),
+                    'id_peran': role_id
+                }
+            };
+
+
+            var promise = svc.svc_CreateAccount(param.account);
+            promise.then(function (response) {
+                var resp_data = response.data;
+                console.log("Response data: ", resp_data);
+                if (resp_data.ProcessSuccess) {
+                    alert(resp_data.InfoMessage.toString() + ", Logging you in");
+                    location.href = "/Home";
+                }
+
+                else {
+                    alert(resp_data.InfoMessage.toString());
+                    window.location.href = "/";
+                }
+            });
         }
-
-        var param = {
-            account: {
-                'username': $scope.SignUp_Username,
-                'password': $scope.SignUp_Password,
-                'tanggal_daftar': new Date().toISOString(),
-                'id_peran': role_id
-            }
-        };
-            
-
-        var promise = svc.svc_CreateAccount(param.account);
-        promise.then(function (response) {
-            var resp_data = response.data;
-            console.log("Response data: ", resp_data);
-            if (resp_data.ProcessSuccess) {
-                alert(resp_data.InfoMessage.toString() + ", Logging you in");
-                location.href = "/Home";
-            }
-
-            else {
-                alert(resp_data.InfoMessage.toString());
-                window.location.href = "/";
-            }
-        });
     }
 
     const loginBtn = angular.element(document.getElementById('login'));
