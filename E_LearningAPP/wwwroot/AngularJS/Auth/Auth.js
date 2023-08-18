@@ -246,14 +246,14 @@ app.controller('ctrl', function ($scope, svc) {
     $scope.confirm.onkeyup = function () {
         if ($scope.SignUp_Password != $scope.Confirm_Password) {
             document.getElementById("wrong_psw_alert").style.color = "red";
-            document.getElementById("wrong_psw_alert").innerHTML = "☒ Use same password";
+            document.getElementById("wrong_psw_alert").innerHTML = "☒ Password tidak cocok";
             //document.getElementById("wrong_psw_alert").style.paddingLeft = "33px";
             document.getElementById("wrong_psw_alert").style.textAlign = "center";
             
         }
         else {
             document.getElementById('wrong_psw_alert').style.color = 'green';
-            document.getElementById('wrong_psw_alert').innerHTML = '🗹 Password Matched';
+            document.getElementById('wrong_psw_alert').innerHTML = '🗹 Password cocok';
             
         }
     }
@@ -482,46 +482,6 @@ app.controller('ctrl', function ($scope, svc) {
             }
             
         });
-        
-        
-
-
-        //if (($scope.AccountType == null) || ($scope.AccountType == undefined) || ($scope.AccountType == "")) {
-        //    alert("Choose the account type!");
-        //}
-
-        //else {
-        //    console.log("Username: ", $scope.SignUp_Username);
-        //    console.log("Password: ", $scope.SignUp_Password);
-        //    console.log("Account Type: ", $scope.AccountType);
-        //    console.log("Register Date: ", new Date().toLocaleDateString());
-        //    console.log("Role ID: ", role_id);
-
-        //    var param = {
-        //        account: {
-        //            'username': $scope.SignUp_Username,
-        //            'password': $scope.SignUp_Password,
-        //            'tanggal_daftar': new Date().toISOString(),
-        //            'id_peran': role_id
-        //        }
-        //    };
-
-            
-        //    var promise = svc.svc_CreateAccount(param.account);
-        //    promise.then(function (response) {
-        //        var resp_data = response.data;
-        //        console.log("Response data: ", resp_data);
-        //        if (resp_data.ProcessSuccess) {
-        //            alert(resp_data.InfoMessage.toString() + ", Logging you in");
-        //            location.href = "/Home";
-        //        }
-
-        //        else {
-        //            alert(resp_data.InfoMessage.toString());
-        //            window.location.href = "/";
-        //        }
-        //    });
-        //}
     }
 
     const loginBtn = angular.element(document.getElementById('login'));

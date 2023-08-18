@@ -89,7 +89,7 @@
                 <form>
                     <div class="signup">
                         <h2 class="form-title" id="signup" ng-click="handleSignUp()">
-                            Sign up
+                            Daftar
                         </h2>
                         <div class="form-holder">
                             <input type="text" class="input" placeholder="Username" ng-model="SignUp_Username" required/>
@@ -103,11 +103,11 @@
                             </div>
 
                             <div id="message">
-                                <h6>Password must contain the following:</h6>
-                                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                                <p id="number" class="invalid">A <b>number</b></p>
-                                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                                <h6>Password harus terdiri dari:</h6>
+                                <p id="letter" class="invalid"><b>Huruf kecil</b></p>
+                                <p id="capital" class="invalid"><b>Huruf kapital</b></p>
+                                <p id="number" class="invalid"><b>Angka</b></p>
+                                <p id="length" class="invalid">Minimal berisi <b>8 karakter</b></p>
                             </div>
                             <div style="display: flex;">
                                 <input type="password" id="confirm_psw" ng-model="Confirm_Password" class="input" placeholder="Confirm Password" required/>
@@ -123,7 +123,7 @@
 
 
 
-                        <button type="submit" class="submit-btn" id="submit" ng-click="SignUp()">Sign up</button>
+                        <button type="submit" class="submit-btn" id="submit" ng-click="SignUp()">Daftar</button>
                     </div>
                 </form>
                 
@@ -133,13 +133,13 @@
                     <div class="login slide-up">
                         <div class="center">
                             <h2 class="form-title" id="login" ng-click="handleLogin()">
-                                Log in
+                                Masuk
                             </h2>
                             <div class="form-holder">
                                 <input type="text" class="input" placeholder="Username" ng-model="login_username" required />
                                 <input type="password" class="input" placeholder="Password" ng-model="login_password" required/>
                             </div>
-                            <button type="submit" class="submit-btn" ng-click="GetAccountID()">Log in</button>
+                            <button type="submit" class="submit-btn" ng-click="GetAccountID()">Masuk</button>
                         </div>
                     </div>
                 </form>
@@ -151,7 +151,7 @@
                 <div class="container">
                     <div id="formlogin" style="padding-top: 30%">
                         <div class="row" style="justify-content: center">
-                            <h5 class="rubik mt-3" style="text-align:center">Select the account type !</h5>
+                            <h5 class="rubik mt-3" style="text-align:center">Pilih tipe akun !</h5>
                         </div>
                         <div class="row mt-2">
                             <div class="col">
@@ -159,7 +159,7 @@
                                     <input type="radio" name="siswatutor" value="siswa" id="customRadio" class="tutorsiswa" checked ng-model="AccountType">
                                     <div class="card-input">
                                         <img class="img-fluid" src="~/img/Siswa.png" alt="Siswa">
-                                        <h6 class="text-center rubik mt-2">Student</h6>
+                                        <h6 class="text-center rubik mt-2">Siswa</h6>
                                         <img class="img-fluid checked" width="60" src="~/img/checked.png" hidden>
                                     </div>
                                 </label>
@@ -169,14 +169,14 @@
                                     <input type="radio" name="siswatutor" value="tutor" id="customRadio1" class="tutorsiswa" ng-model="AccountType">
                                     <div class="card-input">
                                         <img class="img-fluid" src="~/img/Guru.png" alt="Tutor">
-                                        <h6 class="text-center rubik mt-2">Teacher</h6>
+                                        <h6 class="text-center rubik mt-2">Tutor</h6>
                                         <img class="img-fluid checked" width="60" src="~/img/checked.png" hidden>
                                     </div>
                                 </label>
                             </div>
                         </div>
                         <div id="is_user_forgot_password" class="text-center mt-3 nunito" style="display: none">
-                            <h6 style="font-weight: 600;">Forgot Password ? <a href="#" class="a-join" id="btn-reset" ng-click="ShowModal()">Reset password</a></h6>
+                            <h6 style="font-weight: 600;">Lupa Password ? <a href="#" class="a-join" id="btn-reset" ng-click="ShowModal()">Ganti password</a></h6>
                         </div>
                         <div class="mt-4" id="pesan-login">&nbsp;</div>
                     </div>
