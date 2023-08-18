@@ -41,7 +41,7 @@ app.service('svc', function ($http) {
     this.svc_UpdatePassword = function (username, password) {
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.3:7290/E-learningAPI/Account/UpdatePassword/username/' + encodeURIComponent(username) + '/newPassword/' + encodeURIComponent(password),
+            url: 'https://192.168.1.2:7290/E-learningAPI/Account/UpdatePassword/username/' + encodeURIComponent(username) + '/newPassword/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json charset=utf-8',
             dataType: 'json'
@@ -53,7 +53,7 @@ app.service('svc', function ($http) {
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetAllAccounts',
+            url: 'https://192.168.1.2:7290/E-LearningAPI/Account/GetAllAccounts',
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -339,7 +339,8 @@ app.controller('ctrl', function ($scope, svc) {
         var promise = svc.svc_GetAllAccounts();
         promise.then(function (response) {
             $scope.accounts = response.data;
-            console.log("Accounts: ", $scope.accounts);
+            //console.log("Accounts: ", $scope.accounts);
+            //return response.data;
         });
     };
 
@@ -375,50 +376,125 @@ app.controller('ctrl', function ($scope, svc) {
 
     $scope.SignUp = function () {
         var role_id = 0;
-        if ($scope.AccountType == "siswa") {
-            role_id = 1;
-        }
+        //console.log("Accounts: ", $scope.account);
+        var prom = svc.svc_GetAllAccounts();
+        prom.then(function (response) {
+            $scope.account = response.data;
+            var exists = $scope.account.some(function (item) {
+                return item.username === $scope.SignUp_Username;
+            });
 
-        else {
-            role_id = 2;
-        }
+            //if (exists) {
+            //    alert("Object with username exists in the array.");
+            //} else {
+            //    alert("Object with username does not exist in the array.");
+            //}
 
-        if (($scope.AccountType == null) || ($scope.AccountType == undefined) || ($scope.AccountType == "")) {
-            alert("Choose the account type!");
-        }
+            console.log("Accounts: ", $scope.account);
 
-        else {
-            console.log("Username: ", $scope.SignUp_Username);
-            console.log("Password: ", $scope.SignUp_Password);
-            console.log("Account Type: ", $scope.AccountType);
-            console.log("Register Date: ", new Date().toLocaleDateString());
-            console.log("Role ID: ", role_id);
+            //kondisi 1 : Username tidak valid (kosong)
+            var cond1 = ($scope.SignUp_Username == null) || ($scope.SignUp_Username == undefined) || ($scope.SignUp_Username == '');
 
-            var param = {
-                account: {
-                    'username': $scope.SignUp_Username,
-                    'password': $scope.SignUp_Password,
-                    'tanggal_daftar': new Date().toISOString(),
-                    'id_peran': role_id
-                }
-            };
+            //kondisi 2 : Password tidak valid (kosong)
+            var cond2 = ($scope.SignUp_Password == null) || ($scope.SignUp_Password == undefined) || ($scope.SignUp_Password == '');
+
+            //kondisi 3 : Tipe akun tidak valid (kosong)
+            var cond3 = ($scope.AccountType == null) || ($scope.AccountType == undefined) || ($scope.AccountType == "");
+
+            //kondisi 4 : password tidak sama
+            var cond4 = ($scope.SignUp_Password != $scope.Confirm_Password);
+
+            if ($scope.AccountType == "siswa") {
+                role_id = 1;
+            }
+
+            else {
+                role_id = 2;
+            }
+
+            //validasi jika username, password, dan tipe akun dibiarkan kosong
+            if (cond1 && cond2 && cond3) {
+                alert('Mohon masukkan username, password, dan pilih tipe akun');
+            }
+
+            //validasi jika username dan password dibiarkan kosong
+            else if (cond1 && cond2) {
+                alert('Mohon masukkan username dan password');
+            }
+
+            //validasi jika username dan tipe akun dibiarkan kosong
+            else if (cond1 && cond3) {
+                alert('Mohon masukkan username dan pilih tipe akun Anda');
+            }
+
+            //validasi jika password dan tipe akun dibiarkan kosong
+            else if (cond2 && cond3) {
+                alert('Mohon masukkan password dan pilih tipe akun Anda');
+            }
+
+            else if (cond1) {
+                alert('Mohon masukkan username');
+            }
+
+            else if (exists) {
+                alert('Username sudah terpakai oleh pengguna lain, mohon ganti dengan username baru');
+            }
+
+            else if (cond2) {
+                alert('Mohon masukkan password');
+            }
+
+            else if (cond3) {
+                alert('Mohon pilih tipe akun Anda');
+            }
+
+            //validasi jika field password dan confirm_password tidak sama
+            else if (cond4) {
+                alert('Mohon gunakan password yang sama')
+            }
 
             
-            var promise = svc.svc_CreateAccount(param.account);
-            promise.then(function (response) {
-                var resp_data = response.data;
-                console.log("Response data: ", resp_data);
-                if (resp_data.ProcessSuccess) {
-                    alert(resp_data.InfoMessage.toString() + ", Logging you in");
-                    location.href = "/Home";
-                }
+        });
+        
+        
 
-                else {
-                    alert(resp_data.InfoMessage.toString());
-                    window.location.href = "/";
-                }
-            });
-        }
+
+        //if (($scope.AccountType == null) || ($scope.AccountType == undefined) || ($scope.AccountType == "")) {
+        //    alert("Choose the account type!");
+        //}
+
+        //else {
+        //    console.log("Username: ", $scope.SignUp_Username);
+        //    console.log("Password: ", $scope.SignUp_Password);
+        //    console.log("Account Type: ", $scope.AccountType);
+        //    console.log("Register Date: ", new Date().toLocaleDateString());
+        //    console.log("Role ID: ", role_id);
+
+        //    var param = {
+        //        account: {
+        //            'username': $scope.SignUp_Username,
+        //            'password': $scope.SignUp_Password,
+        //            'tanggal_daftar': new Date().toISOString(),
+        //            'id_peran': role_id
+        //        }
+        //    };
+
+            
+        //    var promise = svc.svc_CreateAccount(param.account);
+        //    promise.then(function (response) {
+        //        var resp_data = response.data;
+        //        console.log("Response data: ", resp_data);
+        //        if (resp_data.ProcessSuccess) {
+        //            alert(resp_data.InfoMessage.toString() + ", Logging you in");
+        //            location.href = "/Home";
+        //        }
+
+        //        else {
+        //            alert(resp_data.InfoMessage.toString());
+        //            window.location.href = "/";
+        //        }
+        //    });
+        //}
     }
 
     const loginBtn = angular.element(document.getElementById('login'));
@@ -466,7 +542,7 @@ app.controller('ctrl', function ($scope, svc) {
         document.getElementById("my_modal_1").style.display = "block";
     }
 
-    $scope.GetAccounts();
+    //$scope.GetAccounts();
     //$scope.$watch('AccountType', function (newVal, oldVal) {
     //    if (newVal) {
     //        console.log("Account type: ", newVal);

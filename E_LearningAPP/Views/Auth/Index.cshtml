@@ -86,59 +86,64 @@
     <div class="row" style="justify-content:center">
         <div class="col-5">
             <div class="form-structor">
-                <div class="signup">
-                    <h2 class="form-title" id="signup" ng-click="handleSignUp()">
-                        Sign up
-                    </h2>
-                    <div class="form-holder">
-                        <input type="text" class="input" placeholder="Username" ng-model="SignUp_Username" />
-                        <div id="password_field" style="display: flex">
-                            <input type="password" class="input" id="psw" placeholder="Password" ng-model="SignUp_Password" />
-                            <svg id="svg1" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
-                                <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
-                                <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
-                                <circle cx="50" cy="50" r="10" fill="black"></circle>
-                            </svg>
-                        </div>
-
-                        <div id="message">
-                            <h6>Password must contain the following:</h6>
-                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                            <p id="number" class="invalid">A <b>number</b></p>
-                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                        </div>
-                        <div style="display: flex;">
-                            <input type="password" id="confirm_psw" ng-model="Confirm_Password" class="input" placeholder="Confirm Password" />
-                            <svg id="svg2" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
-                                <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
-                                <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
-                                <circle cx="50" cy="50" r="10" fill="black"></circle>
-                            </svg>
-                        </div>
-
-                        <span id="wrong_psw_alert"></span>
-                    </div>
-
-
-
-                    <button class="submit-btn" id="submit" ng-click="SignUp()">Sign up</button>
-                </div>
-
-
-
-                <div class="login slide-up">
-                    <div class="center">
-                        <h2 class="form-title" id="login" ng-click="handleLogin()">
-                            Log in
+                <form>
+                    <div class="signup">
+                        <h2 class="form-title" id="signup" ng-click="handleSignUp()">
+                            Sign up
                         </h2>
                         <div class="form-holder">
-                            <input type="text" class="input" placeholder="Username" ng-model="login_username" />
-                            <input type="password" class="input" placeholder="Password" ng-model="login_password" />
+                            <input type="text" class="input" placeholder="Username" ng-model="SignUp_Username" required/>
+                            <div id="password_field" style="display: flex">
+                                <input type="password" class="input" id="psw" placeholder="Password" ng-model="SignUp_Password" required/>
+                                <svg id="svg1" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
+                                    <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
+                                    <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
+                                    <circle cx="50" cy="50" r="10" fill="black"></circle>
+                                </svg>
+                            </div>
+
+                            <div id="message">
+                                <h6>Password must contain the following:</h6>
+                                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                <p id="number" class="invalid">A <b>number</b></p>
+                                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                            </div>
+                            <div style="display: flex;">
+                                <input type="password" id="confirm_psw" ng-model="Confirm_Password" class="input" placeholder="Confirm Password" required/>
+                                <svg id="svg2" style="padding-left:0px; padding-right: 0px; width: 50%" class="input close" viewBox="0 0 100 100">
+                                    <path id="top-eye-part" d="M10,50 Q50,-10 90,50" fill="none" stroke-width="5"></path>
+                                    <path id="bottom-eye-part" d="M10,50 Q50,110 90,50" fill="none" stroke-width="5"></path>
+                                    <circle cx="50" cy="50" r="10" fill="black"></circle>
+                                </svg>
+                            </div>
+
+                            <span id="wrong_psw_alert"></span>
                         </div>
-                        <button class="submit-btn" ng-click="GetAccountID()">Log in</button>
+
+
+
+                        <button type="submit" class="submit-btn" id="submit" ng-click="SignUp()">Sign up</button>
                     </div>
-                </div>
+                </form>
+                
+
+
+                <form>
+                    <div class="login slide-up">
+                        <div class="center">
+                            <h2 class="form-title" id="login" ng-click="handleLogin()">
+                                Log in
+                            </h2>
+                            <div class="form-holder">
+                                <input type="text" class="input" placeholder="Username" ng-model="login_username" required />
+                                <input type="password" class="input" placeholder="Password" ng-model="login_password" required/>
+                            </div>
+                            <button type="submit" class="submit-btn" ng-click="GetAccountID()">Log in</button>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
         <div class="col-5">
