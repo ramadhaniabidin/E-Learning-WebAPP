@@ -71,7 +71,7 @@ app.service('svc', function ($http) {
 
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.3:7290/E-learningAPI/Account/CreateAccount',
+            url: 'https://192.168.1.2:7290/E-learningAPI/Account/CreateAccount',
             data: account,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -453,6 +453,33 @@ app.controller('ctrl', function ($scope, svc) {
                 alert('Mohon gunakan password yang sama')
             }
 
+            else {
+                console.log('Username: ', $scope.SignUp_Username);
+                console.log('Password: ', $scope.SignUp_Password);
+                console.log('Tipe akun: ', $scope.AccountType);
+                console.log('Id Peran: ', role_id);
+
+                var param = {
+                    account: {
+                        'username': $scope.SignUp_Username,
+                        'password': $scope.SignUp_Password,
+                        'tanggal_daftar': new Date().toISOString(),
+                        'id_peran': role_id
+                    }
+                };
+
+                var signUpPromise = svc.svc_CreateAccount(param.account);
+                signUpPromise.then(function (response) {
+                    var resp_data = response.data;
+                    if (resp_data.ProcessSuccess) {
+                        alert('${resp_data.InfoMessage.toString()}');
+                    }
+                    else {
+                        alert(resp_data.InfoMessage.toString());
+                    }
+                });
+
+            }
             
         });
         
