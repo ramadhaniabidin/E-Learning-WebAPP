@@ -17,7 +17,7 @@ app.service('svc', function ($http) {
     this.svc_GetAccountID = function (username, password) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+            url: 'https://192.168.1.2:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -29,7 +29,7 @@ app.service('svc', function ($http) {
     this.svc_GetAccountByUsername = function (username) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.3:7290/E-learningAPI/Account/GetAccountByUsername/username/' + encodeURIComponent(username),
+            url: 'https://192.168.1.2:7290/E-learningAPI/Account/GetAccountByUsername/username/' + encodeURIComponent(username),
             data: {},
             contentType: 'aplication/json charset=utf-8',
             dataType: 'json'
