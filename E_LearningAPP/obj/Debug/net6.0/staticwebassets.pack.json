@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\AngularJS\\angular.min.js"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\sharedService.js",
+      "PackagePath": "staticwebassets\\AngularJS\\sharedService.js"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Auth\\Auth.css",
       "PackagePath": "staticwebassets\\css\\Auth\\Auth.css"
     },

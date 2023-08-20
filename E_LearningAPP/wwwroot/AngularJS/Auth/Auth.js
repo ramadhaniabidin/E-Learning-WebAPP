@@ -1,4 +1,4 @@
-﻿var app = angular.module('app', ['angular.filter']);
+﻿
 
 app.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -14,6 +14,18 @@ app.config(['$httpProvider', function ($httpProvider) {
 
 
 app.service('svc', function ($http) {
+    this.svc_GetLoginToken = function (username, password) {
+        var response = $http({
+            method: "POST",
+            url: 'https://192.168.1.2:7290/E-LearningAPI/Account/GetLoginToken/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+            data: {},
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
     this.svc_GetAccountID = function (username, password) {
         var response = $http({
             method: 'GET',
@@ -81,7 +93,7 @@ app.service('svc', function ($http) {
     }
 })
 
-app.controller('ctrl', function ($scope, svc) {
+app.controller('ctrl', function ($scope, svc, sharedService) {
     $scope.accounts = [];
     $scope.login_username = '';
     $scope.login_password = '';
@@ -290,21 +302,46 @@ app.controller('ctrl', function ($scope, svc) {
         else if (cond3) {
             alert('Please select your account type');
         }
-
         else {
-            var promise = svc.svc_GetAccountID($scope.login_username, $scope.login_password);
+            var promise = svc.svc_GetLoginToken($scope.login_username, $scope.login_password);
             promise.then(function (response) {
-                accountID = response.data;
-                if ((accountID === null) || (accountID === undefined) || (accountID === 0) || (accountID === '')) {
-                    alert("Login Error");
+                var JwtToken = response.data;
+                if ((JwtToken === null) || (JwtToken === undefined) || (JwtToken === '')) {
+                    alert('Login error');
                 }
-
                 else {
-                    alert("Login Success");
-                    location.href = "/Home";
+                    sessionStorage.setItem('LoginToken', JwtToken);
+                    alert('Login success with token: ' + JwtToken);
+                    location.href = '/Home';
                 }
             });
         }
+
+
+        //else {
+        //    var promise = svc.svc_GetAccountID($scope.login_username, $scope.login_password);
+        //    promise.then(function (response) {
+        //        accountID = response.data;
+        //        //sharedService.setAccountID(accountID);
+        //        if ((accountID === null) || (accountID === undefined) || (accountID === 0) || (accountID === '')) {
+        //            alert("Login Error");
+        //        }
+
+        //        else {
+                    
+        //            var userNameKey = "User:" + $scope.login_username;
+        //            var passwordKey = "Password:" + $scope.login_password;
+
+        //            console.log("Username Key: ", userNameKey);
+        //            console.log("Password Key: ", passwordKey);
+
+        //            sessionStorage.setItem(userNameKey, $scope.login_username);
+        //            sessionStorage.setItem(passwordKey, $scope.login_password);
+        //            alert("Login Success");
+        //            location.href = "/Profile";
+        //        }
+        //    });
+        //}
 
 
     };
@@ -496,9 +533,9 @@ app.controller('ctrl', function ($scope, svc) {
 
         if (!parent.classList.contains('slide-up')) {
             parent.classList.add('slide-up');
-           
-            
-        } else {
+        }
+
+        else {
             signUpBtn[0].parentNode.classList.add('slide-up');
             parent.classList.remove('slide-up');
             document.getElementById('login').style.pointerEvents = "none";
