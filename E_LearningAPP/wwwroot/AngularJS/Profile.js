@@ -45,6 +45,22 @@ app.service('svc', function ($http) {
         return response;
     }
 
+    this.svc_FilterProvinsi = function (provinsi) {
+        var param = {
+            'provinsi': provinsi
+        }
+
+        var response = $http({
+            method: 'POST',
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Address/FilterProvinsi',
+            data: param,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
     this.svc_GetKabupatenByProvinsiName = function (provinsiName) {
         var response = $http({
             method: 'GET',
@@ -91,8 +107,20 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
     $scope.selectedKabupaten = "";
     $scope.selectedKecamatan = "";
     $scope.selectedDesa = "";
+    $scope.test = "";
 
-
+    $scope.ConsoleTest = function () {
+        console.log("Test: ", $scope.test);
+        var promise = svc.svc_FilterProvinsi($scope.test);
+        promise.then(function (response) {
+            var resp_data = response.data;
+            console.log('Response data: ', resp_data);
+            $scope.listProvinsi = [];
+            for (i of resp_data.Provinsi) {
+                $scope.listProvinsi.push(i.namaProvinsi);
+            }
+        });
+    }
 
     $scope.GetAllProvinsiOnLoad = function () {
         var promise = svc.svc_GetAllProvinsi();
