@@ -415,6 +415,7 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
             var resp_data = response.data;
             if (resp_data.Success) {
                 alert(resp_data.Message);
+                location.href= '/Home';
             }
 
             else {
