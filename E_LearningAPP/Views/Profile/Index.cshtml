@@ -101,8 +101,6 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" ng-click="GetAccountByUsername()">Check Account</button>
-                <button class="btn btn-danger" onclick="document.getElementById('popUp_Provinsi').style.display = 'none'">Close</button>
             </div>
         </div>
     </dialog>
@@ -111,9 +109,15 @@
         <div class="modal-content" style="padding-bottom: 0px; padding-top: 0px">
             <div class="modal-header" style="display:flex">
                 <h5 style="margin-bottom: 0px">Pilih Kecamatan ({{selectedProvinsi}}, {{selectedKabupaten}})</h5>
-                <span class="close-modal" onclick="$('#popUp_Kecamatan').css('display', 'none')">&times;</span>
+                <span class="close-modal" ng-click="ClosePopUP_Kecamatan()">&times;</span>
             </div>
             <div class="modal-body">
+                <div style="padding-bottom: 2%">
+                    <label class="control-label">Cari Kabupaten</label>
+                </div>
+                <div style="padding-bottom: 2%">
+                    <input type="text" placeholder="Masukkan nama kabupaten" style="border-radius: 10px; text-align:center; width: 100%" ng-model="test" ng-keyup="FilterKecamatan()" />
+                </div>
                 <div>
                     <table style="width: 100%">
                         <thead style="border: 1px solid black; background-color:red; color:white">
@@ -128,7 +132,7 @@
                                 <td style="border: solid 1px black; text-align: center;">{{$index + 1}}</td>
                                 <td style="border: solid 1px black; text-align: center;">{{i}}</td>
                                 <td style="border: solid 1px black; text-align: center;">
-                                    <a style="color: blue; cursor:pointer" ng-click="OnSelectedKecamatan(selectedProvinsi, selectedKabupaten, i)">SELECT</a>
+                                    <a style="color: blue; cursor:pointer" ng-click="OnSelectedKecamatan(i)">SELECT</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -136,8 +140,6 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" ng-click="GetAccountByUsername()">Check Account</button>
-                <button class="btn btn-danger" onclick="document.getElementById('popUp_Provinsi').style.display = 'none'">Close</button>
             </div>
         </div>
     </dialog>
@@ -146,7 +148,7 @@
         <div class="modal-content" style="padding-bottom: 0px; padding-top: 0px">
             <div class="modal-header" style="display:flex">
                 <h5 style="margin-bottom: 0px">Pilih Desa/Kelurahan ({{selectedProvinsi}}, {{selectedKabupaten}}, {{selectedKecamatan}})</h5>
-                <span class="close-modal" onclick="$('#popUp_Desa').css('display', 'none')">&times;</span>
+                <span class="close-modal" ng-click="ClosePopUp_Desa()">&times;</span>
             </div>
             <div class="modal-body">
                 <div>
@@ -171,8 +173,6 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" ng-click="GetAccountByUsername()">Check Account</button>
-                <button class="btn btn-danger" onclick="document.getElementById('popUp_Desa').style.display = 'none'">Close</button>
             </div>
         </div>
     </dialog>

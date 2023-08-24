@@ -96,6 +96,25 @@ app.service('svc', function ($http) {
         return response;
     }
 
+    this.svc_FilterDesa = function (provinsi, kabupaten, kecamatan, desa) {
+        var requestBody = {
+            'provinsi': provinsi,
+            'kabupaten': kabupaten,
+            'kecamatan': kecamatan,
+            'desa': desa
+        };
+
+        var response = $http({
+            method: 'POST',
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Address/FilterDesa',
+            data: requestBody,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
     this.svc_GetKabupatenByProvinsiName = function (provinsiName) {
         var response = $http({
             method: 'GET',
@@ -169,6 +188,18 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
         });
     }
 
+    $scope.FilterKecamatan = function () {
+        var promise = svc.svc_FilterKecamatan($scope.selectedProvinsi, $scope.selectedKabupaten, $scope.test);
+        promise.then(function (response) {
+            var resp_data = response.data;
+            console.log('Response data: ', resp_data);
+            $scope.listKecamatan = [];
+            for (i of resp_data.Kecamatan) {
+                $scope.listKecamatan.push(i.namaKecamatan);
+            }
+        });
+    }
+
     $scope.GetAllProvinsiOnLoad = function () {
         var promise = svc.svc_GetAllProvinsi();
         console.log('Account ID: ', sharedService.getAccountID());
@@ -238,11 +269,24 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
             }
             $("#popUp_Kecamatan").css("display", "block");
         });
-        
+    }
+
+    $scope.ClosePopUP_Kecamatan = function () {
+        $("#popUp_Kecamatan").css("display", "none");
+        $scope.test = "";
     }
 
     $scope.DisplayPopUpDesa = function () {
-        $("#popUp_Desa").css("display", "block");
+        var promise = svc.svc_FilterDesa($scope.selectedProvinsi, $scope.selectedKabupaten, $scope.selectedKecamatan, '');
+        promise.then(function (response) {
+            var resp_data = response.data;
+            $scope.listDesa = [];
+            for (i of resp_data.Desa) {
+                $scope.listDesa.push(i.namaDesa);
+            }
+            $("#popUp_Desa").css("display", "block");
+        });
+        
     }
 
     $scope.AlertSelectedProvinsi = function (selectedProvinsi) {
@@ -301,20 +345,27 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
         }
     }
 
-    $scope.OnSelectedKecamatan = function (selectedProvinsi, selectedKabupaten, selectedKecamatan) {
-        if (selectedProvinsi && selectedKabupaten && selectedKecamatan) {
-            var promise = svc.svc_GetDesa(selectedProvinsi, selectedKabupaten, selectedKecamatan);
-            promise.then(function (response) {
-                var resp_data = response.data;
-                $scope.selectedKecamatan = selectedKecamatan;
-                $scope.listDesa = [];
-                for (i of resp_data.desa) {
-                    $scope.listDesa.push(i.namaDesa);
-                }
+    $scope.OnSelectedKecamatan = function (selectedKecamatan) {
+        //if (selectedProvinsi && selectedKabupaten && selectedKecamatan) {
+        //    var promise = svc.svc_GetDesa(selectedProvinsi, selectedKabupaten, selectedKecamatan);
+        //    promise.then(function (response) {
+        //        var resp_data = response.data;
+        //        $scope.selectedKecamatan = selectedKecamatan;
+        //        $scope.listDesa = [];
+        //        for (i of resp_data.desa) {
+        //            $scope.listDesa.push(i.namaDesa);
+        //        }
 
-                console.log('List Desa: ', $scope.listDesa);
-                $('#popUp_Kecamatan').css('display', 'none');
-            });
+        //        console.log('List Desa: ', $scope.listDesa);
+        //        $('#popUp_Kecamatan').css('display', 'none');
+        //    });
+        //}
+
+        if (selectedKecamatan) {
+            $scope.selectedKecamatan = selectedKecamatan;
+            $('#popUp_Kecamatan').css('display', 'none');
+            $scope.test = "";
+
         }
     }
 
@@ -322,6 +373,7 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
         if (selectedDesa) {
             $scope.selectedDesa = selectedDesa;
             $('#popUp_Desa').css('display', 'none');
+            $scope.test = "";
         }
     }
 
