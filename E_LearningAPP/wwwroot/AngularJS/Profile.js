@@ -1,6 +1,19 @@
 ﻿/*var app = angular.module('app', ['angular.filter']);*/
 
 app.service('svc', function ($http) {
+
+    this.svc_OnLoadGetProfile = function (token) {
+        var response = $http({
+            method: 'GET',
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetAccountDetailByToken/token/' + encodeURIComponent(token),
+            data: {},
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    }
+
     this.svc_InsertOrUpdateProfile = function (accountDetail, token) {
         var param = {
             'accountDetail': accountDetail,
@@ -9,7 +22,7 @@ app.service('svc', function ($http) {
 
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.2:7290/E-LearningAPI/Account/InsertOrUpdateProfile/token/' + encodeURIComponent(token),
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/InsertOrUpdateProfile/token/' + encodeURIComponent(token),
             data: param.accountDetail,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -23,7 +36,7 @@ app.service('svc', function ($http) {
     this.svc_GetAllProvinsi = function () {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.2:7290/E-LearningAPI/Address/GetAllProvince',
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Address/GetAllProvince',
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -35,7 +48,7 @@ app.service('svc', function ($http) {
     this.svc_GetKabupatenByProvinsiName = function (provinsiName) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.2:7290/E-LearningAPI/Address/ListKabupatenByProvinsiName/provinsiName/' + encodeURIComponent(provinsiName),
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Address/ListKabupatenByProvinsiName/provinsiName/' + encodeURIComponent(provinsiName),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -47,7 +60,7 @@ app.service('svc', function ($http) {
     this.svc_GetKecamatanByKabupatenName = function (provinsiName, kabupatenName) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.2:7290/E-LearningAPI/Address/GetAllKecamatan/provinsi/' + encodeURIComponent(provinsiName) + '/kabupaten/' + encodeURIComponent(kabupatenName),
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Address/GetAllKecamatan/provinsi/' + encodeURIComponent(provinsiName) + '/kabupaten/' + encodeURIComponent(kabupatenName),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -59,7 +72,7 @@ app.service('svc', function ($http) {
     this.svc_GetDesa = function (provinsiName, kabupatenName, kecamatanName) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.2:7290/E-LearningAPI/Address/GetAllDesa/provinsi/' + encodeURIComponent(provinsiName) + '/kabupaten/' + encodeURIComponent(kabupatenName) + '/kecamatan/' + encodeURIComponent(kecamatanName),
+            url: 'https://192.168.1.3:7290/E-LearningAPI/Address/GetAllDesa/provinsi/' + encodeURIComponent(provinsiName) + '/kabupaten/' + encodeURIComponent(kabupatenName) + '/kecamatan/' + encodeURIComponent(kecamatanName),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -71,13 +84,13 @@ app.service('svc', function ($http) {
 
 app.controller('ctrl', function ($scope, svc, sharedService) {
     $scope.province = [];
-    $scope.namaPengguna;
-    $scope.noTelpPengguna;
-    $scope.emailPengguna;
-    $scope.selectedProvinsi;
-    $scope.selectedKabupaten;
-    $scope.selectedKecamatan;
-    $scope.selectedDesa;
+    $scope.namaPengguna = "";
+    $scope.noTelpPengguna = "";
+    $scope.emailPengguna = "";
+    $scope.selectedProvinsi = "";
+    $scope.selectedKabupaten = "";
+    $scope.selectedKecamatan = "";
+    $scope.selectedDesa = "";
 
 
 
@@ -86,23 +99,44 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
         console.log('Account ID: ', sharedService.getAccountID());
         promise.then(function (response) {
             var resp_data = response.data
-            console.log('Response data: ', resp_data);
+            //console.log('Response data: ', resp_data);
             $scope.province = resp_data.Provinsi;
             console.log('List Provinsi: ', $scope.province);
             $scope.listProvinsi = [];
 
             for (i of $scope.province) {
-                console.log('Provinsi ke', i.id + ' adalah: ', i.namaProvinsi);
+                //console.log('Provinsi ke', i.id + ' adalah: ', i.namaProvinsi);
                 $scope.listProvinsi.push(i.namaProvinsi);
             }
 
-            console.log('List nama provinsi: ', $scope.listProvinsi);
+            //console.log('List nama provinsi: ', $scope.listProvinsi);
         });
+    }
+
+    $scope.DisplayPopUpProvinsi = function () {
+        $("#popUp_Provinsi").css("display", "block");
+        $scope.selectedKabupaten = "";
+        $scope.selectedKecamatan = "";
+        $scope.selectedDesa = "";
+    }
+
+    $scope.DisplayPopUpKabupaten = function () {
+        $("#popUp_Kabupaten").css("display", "block");
+    }
+
+    $scope.DisplayPopUpKecamatan = function () {
+        $("#popUp_Kecamatan").css("display", "block");
+    }
+
+    $scope.DisplayPopUpDesa = function () {
+        $("#popUp_Desa").css("display", "block");
     }
 
     $scope.AlertSelectedProvinsi = function (selectedProvinsi) {
         if (selectedProvinsi) {
             alert('Kamu memilih ' + selectedProvinsi);
+            $scope.selectedProvinsi = selectedProvinsi;
+            document.getElementById('popUp_Provinsi').style.display = 'none';
         }
     }
 
@@ -111,12 +145,14 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
             var promise = svc.svc_GetKabupatenByProvinsiName(selectedProvinsi);
             promise.then(function (response) {
                 var resp_data = response.data;
+                $scope.selectedProvinsi = selectedProvinsi;
                 $scope.listKabupaten = [];
                 for (i of resp_data.kabupaten) {
                     $scope.listKabupaten.push(i.namaKabupaten);
                 }
 
                 console.log('List Kabupaten: ', $scope.listKabupaten);
+                $('#popUp_Provinsi').css('display', 'none');
             })
         }
     }
@@ -126,12 +162,14 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
             var promise = svc.svc_GetKecamatanByKabupatenName(selectedProvinsi, selectedKabupaten);
             promise.then(function (response) {
                 var resp_data = response.data;
+                $scope.selectedKabupaten = selectedKabupaten;
                 $scope.listKecamatan = [];
                 for (i of resp_data.kecamatan) {
                     $scope.listKecamatan.push(i.namaKecamatan);
                 }
 
                 console.log('List Kecamatan: ', $scope.listKecamatan);
+                $('#popUp_Kabupaten').css('display', 'none');
             });
         }
     }
@@ -141,13 +179,22 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
             var promise = svc.svc_GetDesa(selectedProvinsi, selectedKabupaten, selectedKecamatan);
             promise.then(function (response) {
                 var resp_data = response.data;
+                $scope.selectedKecamatan = selectedKecamatan;
                 $scope.listDesa = [];
                 for (i of resp_data.desa) {
                     $scope.listDesa.push(i.namaDesa);
                 }
 
                 console.log('List Desa: ', $scope.listDesa);
+                $('#popUp_Kecamatan').css('display', 'none');
             });
+        }
+    }
+
+    $scope.OnSelectedDesa = function (selectedDesa) {
+        if (selectedDesa) {
+            $scope.selectedDesa = selectedDesa;
+            $('#popUp_Desa').css('display', 'none');
         }
     }
 
@@ -181,7 +228,29 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
         });
     }
 
-    $scope.GetAllProvinsiOnLoad();
+    $scope.GetProfileOnLoad = function () {
+        var token = sessionStorage.getItem('LoginToken');
+        var promise = svc.svc_OnLoadGetProfile(token);
+        promise.then(function (response) {
+            var resp_data = response.data;
+            if (resp_data.Success) {
+                console.log('Response Data: ', resp_data);
+                var accountDetail = resp_data.accountDetail;
+
+                $scope.namaPengguna = accountDetail.nama;
+                $scope.noTelpPengguna = accountDetail.no_telp;
+                $scope.selectedProvinsi = accountDetail.provinsi;
+                $scope.selectedKabupaten = accountDetail.kabupaten;
+                $scope.selectedKecamatan = accountDetail.kecamatan;
+                $scope.selectedDesa = accountDetail.desa;
+                $scope.emailPengguna = accountDetail.email;
+            }
+        });
+    }
+
     
+    $scope.GetAllProvinsiOnLoad();
+    $scope.GetProfileOnLoad();
+   
 });
 
