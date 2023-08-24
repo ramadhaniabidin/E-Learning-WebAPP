@@ -113,10 +113,10 @@
             </div>
             <div class="modal-body">
                 <div style="padding-bottom: 2%">
-                    <label class="control-label">Cari Kabupaten</label>
+                    <label class="control-label">Cari Kecamatan</label>
                 </div>
                 <div style="padding-bottom: 2%">
-                    <input type="text" placeholder="Masukkan nama kabupaten" style="border-radius: 10px; text-align:center; width: 100%" ng-model="test" ng-keyup="FilterKecamatan()" />
+                    <input type="text" placeholder="Masukkan nama kecamatan" style="border-radius: 10px; text-align:center; width: 100%" ng-model="test" ng-keyup="FilterKecamatan()" />
                 </div>
                 <div>
                     <table style="width: 100%">
@@ -151,6 +151,12 @@
                 <span class="close-modal" ng-click="ClosePopUp_Desa()">&times;</span>
             </div>
             <div class="modal-body">
+                <div style="padding-bottom: 2%">
+                    <label class="control-label">Cari Desa / Kelurahan</label>
+                </div>
+                <div style="padding-bottom: 2%">
+                    <input type="text" placeholder="Masukkan nama desa / kelurahan" style="border-radius: 10px; text-align:center; width: 100%" ng-model="test" ng-keyup="FilterDesa()" />
+                </div>
                 <div>
                     <table style="width: 100%">
                         <thead style="border: 1px solid black; background-color:red; color:white">

@@ -104,6 +104,8 @@ app.service('svc', function ($http) {
             'desa': desa
         };
 
+        console.log('Request body: ', requestBody);
+
         var response = $http({
             method: 'POST',
             url: 'https://192.168.1.3:7290/E-LearningAPI/Address/FilterDesa',
@@ -200,6 +202,18 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
         });
     }
 
+    $scope.FilterDesa = function () {
+        var promise = svc.svc_FilterDesa($scope.selectedProvinsi, $scope.selectedKabupaten, $scope.selectedKecamatan, $scope.test);
+        promise.then(function (response) {
+            var resp_data = response.data;
+            console.log('Response Data: ', resp_data);
+            $scope.listDesa = [];
+            for (i of resp_data.Desa) {
+                $scope.listDesa.push(i.namaDesa);
+            }
+        });
+    }
+
     $scope.GetAllProvinsiOnLoad = function () {
         var promise = svc.svc_GetAllProvinsi();
         console.log('Account ID: ', sharedService.getAccountID());
@@ -255,6 +269,8 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
                 $scope.listKabupaten.push(i.namaKabupaten);
             }
             $("#popUp_Kabupaten").css("display", "block");
+            $scope.selectedKecamatan = "";
+            $scope.selectedDesa = "";
         });
         
     }
@@ -268,11 +284,19 @@ app.controller('ctrl', function ($scope, svc, sharedService) {
                 $scope.listKecamatan.push(i.namaKecamatan);
             }
             $("#popUp_Kecamatan").css("display", "block");
+            $scope.selectedDesa = "";
         });
     }
 
     $scope.ClosePopUP_Kecamatan = function () {
         $("#popUp_Kecamatan").css("display", "none");
+        $scope.test = "";
+    }
+
+    
+
+    $scope.ClosePopUp_Desa = function () {
+        $("#popUp_Desa").css("display", "none");
         $scope.test = "";
     }
 
