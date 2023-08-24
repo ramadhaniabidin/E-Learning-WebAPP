@@ -376,6 +376,12 @@ svg path{
         d: path("M10,50 Q50,110 90,50");
     }
 
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
 
 .my-modal {
     display: none; /* Hidden by default */
@@ -389,6 +395,7 @@ svg path{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: appear 350ms ease-in 1;
 }
 
 .modal-content {
