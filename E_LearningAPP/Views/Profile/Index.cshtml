@@ -31,14 +31,14 @@
         <div class="modal-content" style="padding-bottom: 0px; padding-top: 0px">
             <div class="modal-header" style="display:flex">
                 <h5 style="margin-bottom: 0px">Pilih Provinsi</h5>
-                <span class="close-modal" onclick="$('#popUp_Provinsi').css('display', 'none')">&times;</span>
+                <span class="close-modal" ng-click="ClosePopUp_Provinsi()">&times;</span>
             </div>
             <div class="modal-body">
                 <div style="padding-bottom: 2%">
-                    <label class="control-label">Type your username</label>
+                    <label class="control-label">Cari Provinsi</label>
                 </div>
                 <div style="padding-bottom: 2%">
-                    <input type="text" placeholder="username" style="border-radius: 10px; text-align:center; width: 100%" ng-model="test" ng-keyup="ConsoleTest()"/>
+                    <input type="text" placeholder="Masukkan nama provinsi" style="border-radius: 10px; text-align:center; width: 100%" ng-model="test" ng-keyup="ConsoleTest()"/>
                 </div>
                 <div>
                     <table style="width: 100%">
@@ -62,8 +62,6 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" ng-click="GetAccountByUsername()">Check Account</button>
-                <button class="btn btn-danger" onclick="document.getElementById('popUp_Provinsi').style.display = 'none'">Close</button>
             </div>
         </div>
     </dialog>
@@ -72,9 +70,15 @@
         <div class="modal-content" style="padding-bottom: 0px; padding-top: 0px">
             <div class="modal-header" style="display:flex">
                 <h5 style="margin-bottom: 0px">Pilih Kabupaten {{selectedProvinsi}}</h5>
-                <span class="close-modal" onclick="$('#popUp_Kabupaten').css('display', 'none')">&times;</span>
+                <span class="close-modal" ng-click="ClosePopUp_Kabupaten()">&times;</span>
             </div>
             <div class="modal-body">
+                <div style="padding-bottom: 2%">
+                    <label class="control-label">Cari Kabupaten</label>
+                </div>
+                <div style="padding-bottom: 2%">
+                    <input type="text" placeholder="Masukkan nama kabupaten" style="border-radius: 10px; text-align:center; width: 100%" ng-model="test" ng-keyup="FilterKabupaten()" />
+                </div>
                 <div>
                     <table style="width: 100%">
                         <thead style="border: 1px solid black; background-color:red; color:white">
@@ -89,7 +93,7 @@
                                 <td style="border: solid 1px black; text-align: center;">{{$index + 1}}</td>
                                 <td style="border: solid 1px black; text-align: center;">{{i}}</td>
                                 <td style="border: solid 1px black; text-align: center;">
-                                    <a style="color: blue; cursor:pointer" ng-click="OnSelectedKabupaten(selectedProvinsi, i)">SELECT</a>
+                                    <a style="color: blue; cursor:pointer" ng-click="OnSelectedKabupaten(i)">SELECT</a>
                                 </td>
                             </tr>
                         </tbody>
