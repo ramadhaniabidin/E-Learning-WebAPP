@@ -1,17 +1,4 @@
-﻿
-
-app.config(['$httpProvider', function ($httpProvider) {
-    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-    $httpProvider.defaults.transformRequest = function (data) {
-        if (data === undefined) {
-            return data;
-        }
-        return JSON.stringify(data, function (key, value) {
-            return (typeof value === 'string') ? value : value;
-        });
-    };
-}]);
-
+﻿var app = angular.module('app', ['ngRoute', 'angular.filter']);
 
 app.service('svc', function ($http) {
     this.svc_GetLoginToken = function (username, password) {
@@ -93,7 +80,7 @@ app.service('svc', function ($http) {
     }
 })
 
-app.controller('ctrl', function ($scope, svc, sharedService) {
+app.controller('AuthController', function ($scope, svc) {
     $scope.accounts = [];
     $scope.login_username = '';
     $scope.login_password = '';

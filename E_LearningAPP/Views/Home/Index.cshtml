@@ -23,17 +23,22 @@
     <link rel="stylesheet" href="~/css/Home/Home.css"/>
     <link rel="stylesheet" href="~/css/Home/carousel.css"/>
 
-    @*<style>
-        .bd-placeholder-img{
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
+    <script src="~/AngularJS/angular.min.js"></script>
+    <script src="~/AngularJS/angular-filter.js"></script>
+    <script src="~/AngularJS/angular-route.js"></script>
+    <script src="~/AngularJS/Home.js"></script>
+
+    <script>
+        var token = sessionStorage.getItem('LoginToken');
+        if ((token == null) || (token == undefined) || (token == '')) {
+            /*location.href = '/Home';*/
+            alert('Anda harus login terlebih dahulu');
+            location.href = '/';
         }
-    </style>*@
+    </script>
+
 </head>
-<body>
+<body ng-app="app" ng-controller="HomeController">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="check2" viewBox="0 0 16 16">
             <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
@@ -182,7 +187,7 @@
         </div>
 
 
-        @*<div class="container marketing">
+        <div class="container marketing">
             <div class="row">
                 <div class="col-lg-4">
                     <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>
@@ -242,7 +247,7 @@
 
             <hr class="featurette-divider">
 
-        </div>*@
+        </div>
 
 
     </main>

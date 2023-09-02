@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\AngularJS\\Auth\\Auth.js"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\Home.js",
+      "PackagePath": "staticwebassets\\AngularJS\\Home.js"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\Profile.js",
       "PackagePath": "staticwebassets\\AngularJS\\Profile.js"
     },
@@ -17,8 +21,20 @@
       "PackagePath": "staticwebassets\\AngularJS\\angular-filter.js"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\angular-route.js",
+      "PackagePath": "staticwebassets\\AngularJS\\angular-route.js"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\angular-route.min.js.map",
+      "PackagePath": "staticwebassets\\AngularJS\\angular-route.min.js.map"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\angular.min.js",
       "PackagePath": "staticwebassets\\AngularJS\\angular.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\angular.min.js.map",
+      "PackagePath": "staticwebassets\\AngularJS\\angular.min.js.map"
     },
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\sharedService.js",
@@ -111,6 +127,10 @@
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\Auth\\Auth.js",
       "PackagePath": "staticwebassets\\js\\Auth\\Auth.js"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\CekToken.js",
+      "PackagePath": "staticwebassets\\js\\CekToken.js"
     },
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js",
