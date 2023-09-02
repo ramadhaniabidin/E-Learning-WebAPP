@@ -303,34 +303,6 @@ app.controller('AuthController', function ($scope, svc) {
                 }
             });
         }
-
-
-        //else {
-        //    var promise = svc.svc_GetAccountID($scope.login_username, $scope.login_password);
-        //    promise.then(function (response) {
-        //        accountID = response.data;
-        //        //sharedService.setAccountID(accountID);
-        //        if ((accountID === null) || (accountID === undefined) || (accountID === 0) || (accountID === '')) {
-        //            alert("Login Error");
-        //        }
-
-        //        else {
-                    
-        //            var userNameKey = "User:" + $scope.login_username;
-        //            var passwordKey = "Password:" + $scope.login_password;
-
-        //            console.log("Username Key: ", userNameKey);
-        //            console.log("Password Key: ", passwordKey);
-
-        //            sessionStorage.setItem(userNameKey, $scope.login_username);
-        //            sessionStorage.setItem(passwordKey, $scope.login_password);
-        //            alert("Login Success");
-        //            location.href = "/Profile";
-        //        }
-        //    });
-        //}
-
-
     };
 
     $scope.ToggleModal = function () {
