@@ -325,6 +325,7 @@ app.controller('AuthController', function ($scope, svc) {
                 }
                 else {
                     alert(responseData.Message);
+
                 }
             });
         }
