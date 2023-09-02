@@ -24,6 +24,15 @@
     <script src="~/AngularJS/angular-filter.js"></script>
     <script src="~/AngularJS/sharedService.js"></script>
     <script src="~/AngularJS/Profile.js"></script>
+
+    <script>
+        var token = sessionStorage.getItem('LoginToken');
+        if ((token == null) || (token == undefined) || (token == '')) {
+            /*location.href = '/Home';*/
+            alert('Anda harus login terlebih dahulu');
+            location.href = '/';
+        }
+    </script>
     
 </head>
 <body ng-app="app" ng-controller="ctrl">
