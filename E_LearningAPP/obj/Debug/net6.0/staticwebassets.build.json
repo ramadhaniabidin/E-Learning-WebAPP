@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZqqAImcaHexdYDXvzkXi1m4nKY9syoOqSxKQZa1jTfE=",
+  "Hash": "kAx9Ltkz4RafTFemUW4B81JItnFHEjf5IZf1rtrOShc=",
   "Source": "E_LearningAPP",
   "BasePath": "_content/E_LearningAPP",
   "Mode": "Default",
@@ -610,23 +610,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js.map"
-    },
-    {
-      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\CekToken.js",
-      "SourceId": "E_LearningAPP",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
-      "BasePath": "_content/E_LearningAPP",
-      "RelativePath": "js/CekToken.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\CekToken.js"
     },
     {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\site.js",

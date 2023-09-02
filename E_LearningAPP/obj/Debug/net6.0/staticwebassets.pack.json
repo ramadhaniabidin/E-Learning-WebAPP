@@ -129,10 +129,6 @@
       "PackagePath": "staticwebassets\\js\\Auth\\Auth.js"
     },
     {
-      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\CekToken.js",
-      "PackagePath": "staticwebassets\\js\\CekToken.js"
-    },
-    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap\\bootstrap.bundle.min.js"
     },

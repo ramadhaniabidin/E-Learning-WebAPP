@@ -1,14 +1,29 @@
 ﻿var app = angular.module('app', ['ngRoute', 'angular.filter']);
 
 app.service('svc', function ($http) {
-    this.svc_GetLoginToken = function (username, password) {
+    this.svc_GetLoginToken = function (username, password, role_id) {
+        //var response = $http({
+        //    method: "POST",
+        //    url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetLoginToken/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+        //    data: {},
+        //    contentType: 'application/json; charset=utf-8',
+        //    dataType: 'json'
+        //});
+        var param = {
+            'username': username,
+            'password': password,
+            'role_id': role_id
+        };
+
         var response = $http({
-            method: "POST",
-            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetLoginToken/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
-            data: {},
+            method: 'POST',
+            url: 'https://192.168.1.3:7290/E-learningAPI/Account/GetLoginToken',
+            data: param,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
         });
+
+        var response
 
         return response;
     }
@@ -290,16 +305,26 @@ app.controller('AuthController', function ($scope, svc) {
             alert('Please select your account type');
         }
         else {
-            var promise = svc.svc_GetLoginToken($scope.login_username, $scope.login_password);
+            var role_id = 0;
+            if ($scope.AccountType == "siswa") {
+                role_id = 1;
+            }
+
+            else if ($scope.AccountType == "tutor") {
+                role_id = 2;
+            }
+            var promise = svc.svc_GetLoginToken($scope.login_username, $scope.login_password, role_id);
             promise.then(function (response) {
-                var JwtToken = response.data;
-                if ((JwtToken === null) || (JwtToken === undefined) || (JwtToken === '')) {
-                    alert('Login error');
+                var responseData = response.data;
+                console.log('Response data: ', responseData);
+                if (responseData.Success) {
+                    var loginToken = responseData.LoginToken;
+                    sessionStorage.setItem('LoginToken', loginToken);
+                    alert('Sukses masuk dengan token: ' + loginToken);
+                    location.href = '/Home';
                 }
                 else {
-                    sessionStorage.setItem('LoginToken', JwtToken);
-                    alert('Login success with token: ' + JwtToken);
-                    location.href = '/Home';
+                    alert(responseData.Message);
                 }
             });
         }
