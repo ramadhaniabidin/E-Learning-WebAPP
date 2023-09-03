@@ -14,9 +14,13 @@
     <link rel="stylesheet" href="~/css/Course.css"/>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/AngularJS/angular.min.js"></script>
+    <script src="~/AngularJS/angular-filter.js"></script>
+    <script src="~/AngularJS/angular-route.js"></script>
+    <script src="~/AngularJS/Course.js"></script>
 
 </head>
-<body>
+<body ng-app="app" ng-controller="CourseController">
 
     <header data-bs-theme="dark">
         <nav class="navbar navbar-dark fixed-top bg-dark" aria-label="Dark offcanvas navbar">
@@ -83,7 +87,7 @@
                             <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
                         </svg>
                         <div class="card-body">
-                            <h5 id="btn-accordion" class="card-title">Fisika</h5>
+                            <h5 id="btn-accordion" class="card-title" ng-click="ShowPhysicsAccordion()">Fisika</h5>
                             <div id="panel1" class="panel" style="padding-left: 0px">
                                 <ul>
                                     <li>Fisika Kelas 10</li>
@@ -125,22 +129,6 @@
         
         
     </main>
-
-    <script>
-        var accordion = document.getElementById('btn-accordion');
-        console.log(accordion);
-        
-        accordion.addEventListener("click", function(){
-            //accordion.classList.toggle('active');
-            var panel = document.getElementById('panel1');
-            if(panel.style.maxHeight){
-                panel.style.maxHeight = null;
-            }
-            else{
-                panel.style.maxHeight = panel.scrollHeight + 'px';
-            }
-        });
-    </script>
 
 </body>
 </html>
