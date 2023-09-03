@@ -1,0 +1,146 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="~/css/Course.css"/>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <header data-bs-theme="dark">
+        <nav class="navbar navbar-dark fixed-top bg-dark" aria-label="Dark offcanvas navbar">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <p class="navbar-brand" href="#" ng-model="userName">{{userName}}</p>
+
+                <div style="width: auto" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">My E-Learning App</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <hr style="color:white; margin-top: 0px; margin-bottom: 0px" />
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="\Auth">
+                                    <i class="bx bx-home-alt-2" style="font-size: 1.25rem; color: white"></i>
+                                    <span style="padding-left: 5%">Halaman Awal</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="\Profile">
+                                    <i class="bx bx-user" style="font-size: 1.25rem; color: white"></i>
+                                    <span style="padding-left: 5%">Profil Anda</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">
+                                    <i class="bx bx-book-open" style="font-size: 1.25rem; color: white"></i>
+                                    <span style="padding-left: 5%">Mulai Belajar</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <br /><br /><br /><br /><br /><br />
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Cari</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+    </header>
+
+    <main>
+        <div class="row" style="padding-top: 5.5%">
+            <div class="col-md-4">
+                <div class="container" >
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#868e96"></rect>
+                            <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 id="btn-accordion" class="card-title">Fisika</h5>
+                            <div id="panel1" class="panel" style="padding-left: 0px">
+                                <ul>
+                                    <li>Fisika Kelas 10</li>
+                                    <li>Fisika Kelas 11</li>
+                                    <li>Fisika Kelas 12</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#868e96"></rect>
+                            <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Matematika</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#868e96"></rect>
+                            <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Kimia</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <script>
+        var accordion = document.getElementById('btn-accordion');
+        console.log(accordion);
+        
+        accordion.addEventListener("click", function(){
+            //accordion.classList.toggle('active');
+            var panel = document.getElementById('panel1');
+            if(panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            }
+            else{
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+            }
+        });
+    </script>
+
+</body>
+</html>

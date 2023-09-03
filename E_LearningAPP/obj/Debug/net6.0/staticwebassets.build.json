@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fNPkHDKiKS5BjhvnVcofDvnrX3BA4Wkevg2rbd6pRGI=",
+  "Hash": "Z1AkimKfcgyIIGb5wI+fM5uvdgHu0XKUHrJyDNw9kvg=",
   "Source": "E_LearningAPP",
   "BasePath": "_content/E_LearningAPP",
   "Mode": "Default",
@@ -304,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Course.css",
+      "SourceId": "E_LearningAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
+      "BasePath": "_content/E_LearningAPP",
+      "RelativePath": "css/Course.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Course.css"
     },
     {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Home\\carousel.css",

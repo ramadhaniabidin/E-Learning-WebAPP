@@ -20,8 +20,14 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.UseEndpoints(endpoints =>
+{
+    app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Auth}/{action=Index}/{id?}");
+    pattern: "{controller=Auth}/{action=Index}/{id?}"
+    );
+});
+
+
 
 app.Run();
