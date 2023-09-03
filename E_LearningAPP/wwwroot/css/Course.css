@@ -9,3 +9,13 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
+
+.grade-redirector{
+    color: black;
+    text-decoration: none;
+}
+
+.grade-redirector:hover{
+    color: blue;
+    opacity: 0.5;
+}

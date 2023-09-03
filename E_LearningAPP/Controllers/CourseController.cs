@@ -10,16 +10,10 @@ namespace E_LearningAPP.Controllers
             return View();
         }
 
-        public IActionResult Physics()
-        {
-            return View();
-        }
-
-        
-        [Route("Course/Physics/{grade}")]
-        public IActionResult PhysicsSelected(string grade)
-        {
-            return View();
-        }
+        //[Route("Course/Physics/{grade}")]
+        //public IActionResult Physics(int grade)
+        //{
+        //    return View();
+        //}
     }
 }
