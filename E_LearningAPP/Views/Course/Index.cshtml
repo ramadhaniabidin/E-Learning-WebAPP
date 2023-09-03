@@ -87,8 +87,8 @@
                             <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
                         </svg>
                         <div class="card-body">
-                            <h5 id="btn-accordion" class="card-title" ng-click="ShowPhysicsAccordion()">Fisika</h5>
-                            <div id="panel1" class="panel" style="padding-left: 0px">
+                            <h5 style="cursor: pointer" class="card-title" ng-click="ToggleAccordion('physics')">Fisika</h5>
+                            <div id="physics-panel" class="panel" style="padding-left: 0px">
                                 <ul>
                                     <li>Fisika Kelas 10</li>
                                     <li>Fisika Kelas 11</li>
@@ -107,7 +107,14 @@
                             <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
                         </svg>
                         <div class="card-body">
-                            <h5 class="card-title">Matematika</h5>
+                            <h5 style="cursor: pointer" class="card-title" ng-click="ToggleAccordion('math')">Matematika</h5>
+                            <div id="math-panel" class="panel" style="padding-left: 0px">
+                                <ul>
+                                    <li>Matematika Kelas 10</li>
+                                    <li>Matematika Kelas 11</li>
+                                    <li>Matematika Kelas 12</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,14 +127,19 @@
                             <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
                         </svg>
                         <div class="card-body">
-                            <h5 class="card-title">Kimia</h5>
+                            <h5 style="cursor: pointer" class="card-title" ng-click="ToggleAccordion('chemistry')">Kimia</h5>
+                            <div id="chemistry-panel" class="panel" style="padding-left: 0px">
+                                <ul>
+                                    <li>Kimia Kelas 10</li>
+                                    <li>Kimia Kelas 11</li>
+                                    <li>Kimia Kelas 12</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        
     </main>
 
 </body>
