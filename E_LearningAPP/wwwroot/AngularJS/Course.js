@@ -52,8 +52,7 @@ app.controller('CourseController', function ($scope, svc) {
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
             panel.style.marginBottom = null;
-            other_panel_1.style.marginBottom = null;
-            other_panel_2.style.marginBottom = null;
+
             console.log('Panel Scrollheight', panel.scrollHeight);
         }
         else {
@@ -65,6 +64,8 @@ app.controller('CourseController', function ($scope, svc) {
             panel.style.maxHeight = panel.scrollHeight + 'px';
             other_panel_1.style.maxHeight = null;
             other_panel_2.style.maxHeight = null;
+            other_panel_1.style.marginBottom = null;
+            other_panel_2.style.marginBottom = null;
 
             panel.style.marginBottom = '2.5%';
             parentPanel.style.maxHeight = totalMaxHeight + 'px';
