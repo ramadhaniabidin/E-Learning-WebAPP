@@ -10,12 +10,26 @@
     transition: max-height 0.3s ease-out;
 }
 
+.curricullum {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
 .grade-redirector{
     color: black;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .grade-redirector:hover{
+    color: blue;
+    opacity: 0.5;
+}
+
+h5:hover{
     color: blue;
     opacity: 0.5;
 }
