@@ -82,46 +82,40 @@
             <div class="col-md-4">
                 <div class="container" >
                     <div class="card">
-@*                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="#868e96"></rect>
-                            <text x="42.5%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-                            <img src="~/img/download.jpg" />
-                        </svg>*@
                         <img src="~/img/download.jpg" width="100%" height="200" />
                         
 
                         <div class="card-body">
-                            <h5 style="cursor: pointer; " class="card-title" ng-click="ToggleAccordion('physics')">Fisika</h5>
+                            <h5 style="cursor: pointer;" class="card-title" ng-click="ToggleAccordion('physics')">Fisika</h5>
+                            <hr style="margin-top: 0px; margin-bottom: 2.5%"/>
                             <div id="physics-panel" class="panel" style="padding-left: 0px">
                                 <ul>
                                     <li>
                                         @*<a class="grade-redirector" href="Course/Physics/10">Fisika Kelas 10</a>*@
-                                        <p style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum(10)">Fisika Kelas 10</p>
+                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 10)">Fisika Kelas 10</a>
                                         <div id="physics-10-panel" class="curricullum" style="padding-left: 0px">
-                                            <ul>
-                                                <li>Fisika Kelas 10 Kurikulum 2013</li>
-                                                <li>Fisika Kelas 10 Kurikulum KTSP</li>
-                                            </ul>
+                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
+                                            <a class="grade-redirector">Fisika Kelas 10 Kurikulum 2013</a>
+                                            <br />
+                                            <a class="grade-redirector">Fisika Kelas 10 Kurikulum KTSP</a>
                                         </div>
                                     </li>
                                     <li>
                                         @*<a class="grade-redirector" href="Course/Physics/11">Fisika Kelas 11</a>*@
-                                        <p style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum(11)">Fisika Kelas 11</p>
+                                        <p style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 11)">Fisika Kelas 11</p>
                                         <div id="physics-11-panel" class="curricullum" style="padding-left: 0px">
-                                            <ul>
-                                                <li>Fisika Kelas 11 Kurikulum 2013</li>
-                                                <li>Fisika Kelas 11 Kurikulum KTSP</li>
-                                            </ul>
+                                            <a class="grade-redirector">Fisika Kelas 11 Kurikulum 2013</a>
+                                            <br />
+                                            <a class="grade-redirector">Fisika Kelas 11 Kurikulum KTSP</a>
                                         </div>
                                     </li>
                                     <li>
                                         @*<a class="grade-redirector" href="Course/Physics/12">Fisika Kelas 12</a>*@
-                                        <p style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum(12)">Fisika Kelas 12</p>
+                                        <p style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 12)">Fisika Kelas 12</p>
                                         <div id="physics-12-panel" class="curricullum" style="padding-left: 0px">
-                                            <ul>
-                                                <li>Fisika Kelas 12 Kurikulum 2013</li>
-                                                <li>Fisika Kelas 12 Kurikulum KTSP</li>
-                                            </ul>
+                                            <a class="grade-redirector">Fisika Kelas 12 Kurikulum 2013</a>
+                                            <br />
+                                            <a class="grade-redirector">Fisika Kelas 12 Kurikulum KTSP</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -142,13 +136,34 @@
                             <div id="math-panel" class="panel" style="padding-left: 0px">
                                 <ul>
                                     <li>
-                                        <a class="grade-redirector" href="Course/Math/10">Matematika Kelas 10</a>
+                                        @*<a class="grade-redirector" href="Course/Math/10">Matematika Kelas 10</a>*@
+                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('math', 10)">Matematika Kelas 10</a>
+                                        <div id="math-10-panel" class="curricullum" style="padding-left: 0px">
+                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
+                                            <a class="grade-redirector">Matematika Kelas 10 Kurikulum 2013</a>
+                                            <br />
+                                            <a class="grade-redirector">Matematika Kelas 10 Kurikulum KTSP</a>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a class="grade-redirector" href="Course/Math/11">Matematika Kelas 11</a>
+                                        @*<a class="grade-redirector" href="Course/Math/11">Matematika Kelas 11</a>*@
+                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('math', 11)">Matematika Kelas 10</a>
+                                        <div id="math-11-panel" class="curricullum" style="padding-left: 0px">
+                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
+                                            <a class="grade-redirector">Matematika Kelas 11 Kurikulum 2013</a>
+                                            <br />
+                                            <a class="grade-redirector">Matematika Kelas 11 Kurikulum KTSP</a>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a class="grade-redirector" href="Course/Math/12">Matematika Kelas 12</a>
+                                        @*<a class="grade-redirector" href="Course/Math/12">Matematika Kelas 12</a>*@
+                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('math', 12)">Matematika Kelas 10</a>
+                                        <div id="math-12-panel" class="curricullum" style="padding-left: 0px">
+                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
+                                            <a class="grade-redirector">Matematika Kelas 12 Kurikulum 2013</a>
+                                            <br />
+                                            <a class="grade-redirector">Matematika Kelas 12 Kurikulum KTSP</a>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
