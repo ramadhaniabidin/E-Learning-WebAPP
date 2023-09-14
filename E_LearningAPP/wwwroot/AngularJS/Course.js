@@ -68,45 +68,24 @@ app.controller('CourseController', function ($scope, svc) {
                 other_panel_2 = document.getElementById('math-11-panel');
             }
         }
-
-
-
-        //if ((subject == 'physics') && (grade == 10)) {
-        //    panel = document.getElementById('physics-10-panel');
-        //    parentPanel = document.getElementById('physics-panel');
-        //    other_panel_1 = document.getElementById('physics-11-panel');
-        //    other_panel_2 = document.getElementById('physics-12-panel');
-        //}
-        //else if ((subject == 'physics') && (grade == 11)) {
-        //    panel = document.getElementById('physics-11-panel');
-        //    parentPanel = document.getElementById('physics-panel');
-        //    other_panel_1 = document.getElementById('physics-10-panel');
-        //    other_panel_2 = document.getElementById('physics-12-panel');
-        //}
-        //else if ((subject == 'physics') && (grade == 12)) {
-        //    panel = document.getElementById('physics-12-panel');
-        //    parentPanel = document.getElementById('physics-panel');
-        //    other_panel_1 = document.getElementById('physics-10-panel');
-        //    other_panel_2 = document.getElementById('physics-11-panel');
-        //}
-        //else if ((subject == 'math') && (grade == 10)) {
-        //    panel = document.getElementById('math-10-panel');
-        //    parentPanel = document.getElementById('math-panel');
-        //    other_panel_1 = document.getElementById('math-11-panel');
-        //    other_panel_2 = document.getElementById('math-12-panel');
-        //}
-        //else if ((subject == 'math') && (grade == 11)) {
-        //    panel = document.getElementById('math-11-panel');
-        //    parentPanel = document.getElementById('math-panel');
-        //    other_panel_1 = document.getElementById('math-10-panel');
-        //    other_panel_2 = document.getElementById('math-12-panel');
-        //}
-        //else if ((subject == 'math') && (grade == 12)) {
-        //    panel = document.getElementById('math-12-panel');
-        //    parentPanel = document.getElementById('math-panel');
-        //    other_panel_1 = document.getElementById('math-10-panel');
-        //    other_panel_2 = document.getElementById('math-11-panel');
-        //}
+        else if (subject == 'chemistry') {
+            parentPanel = document.getElementById('chemistry-panel');
+            if (grade == 10) {
+                panel = document.getElementById('chemistry-10-panel');
+                other_panel_1 = document.getElementById('chemistry-11-panel');
+                other_panel_2 = document.getElementById('chemistry-12-panel');
+            }
+            else if (grade == 11) {
+                panel = document.getElementById('chemistry-11-panel');
+                other_panel_1 = document.getElementById('chemistry-10-panel');
+                other_panel_2 = document.getElementById('chemistry-12-panel');
+            }
+            else if (grade == 12) {
+                panel = document.getElementById('chemistry-12-panel');
+                other_panel_1 = document.getElementById('chemistry-10-panel');
+                other_panel_2 = document.getElementById('chemistry-11-panel');
+            }
+        }
 
         
         console.log(panel);
