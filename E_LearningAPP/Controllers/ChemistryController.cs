@@ -4,10 +4,10 @@ namespace E_LearningAPP.Controllers
 {
     public class ChemistryController : Controller
     {
-        [Route("Course/Chemistry/{grade}")]
-        public IActionResult Index(int grade)
+        [Route("Course/Chemistry/{curr}/{grade}")]
+        public IActionResult Index(string curr, int grade)
         {
-            return View($"/Views/Chemistry/{grade}/Index.cshtml");
+            return View($"/Views/Chemistry/{curr}/{grade}/Index.cshtml");
         }
     }
 }
