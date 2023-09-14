@@ -4,11 +4,11 @@ namespace E_LearningAPP.Controllers
 {
     public class PhysicsController : Controller
     {
-        [Route("Course/Physics/{grade}")]
-        public IActionResult Index(int grade)
+        [Route("Course/Physics/{curr}/{grade}")]
+        public IActionResult Index(string curr, int grade)
         {
-            Console.WriteLine($"Grade = {grade}");
-            return View($"/Views/Physics/{grade}/Index.cshtml");
+            Console.WriteLine($"Curricullum = {curr}, Grade = {grade}");
+            return View($"/Views/Physics/{curr}/{grade}/Index.cshtml");
             //return View();
         }
     }
