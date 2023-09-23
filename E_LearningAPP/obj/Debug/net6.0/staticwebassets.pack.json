@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\css\\Home\\carousel.css"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\MasterPage.css",
+      "PackagePath": "staticwebassets\\css\\MasterPage.css"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Profile\\Profile.css",
       "PackagePath": "staticwebassets\\css\\Profile\\Profile.css"
     },
