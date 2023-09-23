@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UvTNQzDGuGl6wg4iBQhqgHtI1KJXZM8HKiP5fHe3PO8=",
+  "Hash": "4DRvPTHJtfr2D9rdILBu5AzXxrt+A8t8+d8Y2a0pqgU=",
   "Source": "E_LearningAPP",
   "BasePath": "_content/E_LearningAPP",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AngularJS\\sharedService.js"
+    },
+    {
+      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\TestPage.js",
+      "SourceId": "E_LearningAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
+      "BasePath": "_content/E_LearningAPP",
+      "RelativePath": "AngularJS/TestPage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AngularJS\\TestPage.js"
     },
     {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\Auth\\Auth.css",
@@ -510,6 +527,23 @@
       "OriginalItemSpec": "wwwroot\\img\\chemistry.jpg"
     },
     {
+      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\chemistry1.jpg",
+      "SourceId": "E_LearningAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
+      "BasePath": "_content/E_LearningAPP",
+      "RelativePath": "img/chemistry1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\chemistry1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\course background.jpg",
       "SourceId": "E_LearningAPP",
       "SourceType": "Discovered",
@@ -678,6 +712,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\pair of shoes.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\physics.jpg",
+      "SourceId": "E_LearningAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
+      "BasePath": "_content/E_LearningAPP",
+      "RelativePath": "img/physics.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\physics.jpg"
     },
     {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\profile.jpg",

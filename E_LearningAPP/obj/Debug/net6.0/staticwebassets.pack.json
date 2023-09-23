@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\AngularJS\\Profile.js"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\TestPage.js",
+      "PackagePath": "staticwebassets\\AngularJS\\TestPage.js"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\AngularJS\\angular-filter.js",
       "PackagePath": "staticwebassets\\AngularJS\\angular-filter.js"
     },
@@ -121,6 +125,10 @@
       "PackagePath": "staticwebassets\\img\\chemistry.jpg"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\chemistry1.jpg",
+      "PackagePath": "staticwebassets\\img\\chemistry1.jpg"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\course background.jpg",
       "PackagePath": "staticwebassets\\img\\course background.jpg"
     },
@@ -155,6 +163,10 @@
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\pair of shoes.jpg",
       "PackagePath": "staticwebassets\\img\\pair of shoes.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\physics.jpg",
+      "PackagePath": "staticwebassets\\img\\physics.jpg"
     },
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\profile.jpg",
