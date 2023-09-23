@@ -2,14 +2,21 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    
     Layout = "MasterPage";
 }
+<head>
+    <title>Test Page</title>
+    <link rel="stylesheet" href="~/css/TestPage.css"/>
+</head>
+
 <main style="padding-top: 5.5%">
     <section class="articles">
         <article>
             <div class="article-wrapper">
                 <figure>
-                    <img src="https://picsum.photos/id/1011/800/450" alt="" />
+                    @*<img src="https://picsum.photos/id/1011/800/450" alt="" />*@
+                    <img src="~/img/girl on boat.jpg" alt=""/>
                 </figure>
                 <div class="article-body">
                     <h2>This is some title</h2>
@@ -28,7 +35,8 @@
         <article>
             <div class="article-wrapper">
                 <figure>
-                    <img src="https://picsum.photos/id/1005/800/450" alt="" />
+                    @*<img src="https://picsum.photos/id/1005/800/450" alt="" />*@
+                    <img src="~/img/man with glasses.jpg" alt=""/>
                 </figure>
                 <div class="article-body">
                     <h2>This is some title</h2>
@@ -47,7 +55,8 @@
         <article>
             <div class="article-wrapper">
                 <figure>
-                    <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    @*<img src="https://picsum.photos/id/103/800/450" alt="" />*@
+                    <img src="~/img/pair of shoes.jpg" alt=""/>
                 </figure>
                 <div class="article-body">
                     <h2>This is some title</h2>

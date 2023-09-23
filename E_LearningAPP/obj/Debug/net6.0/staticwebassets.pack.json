@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\css\\Profile\\Profile.css"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\TestPage.css",
+      "PackagePath": "staticwebassets\\css\\TestPage.css"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
@@ -125,6 +129,10 @@
       "PackagePath": "staticwebassets\\img\\download.jpg"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\girl on boat.jpg",
+      "PackagePath": "staticwebassets\\img\\girl on boat.jpg"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\login.avif",
       "PackagePath": "staticwebassets\\img\\login.avif"
     },
@@ -133,8 +141,16 @@
       "PackagePath": "staticwebassets\\img\\login.jpg"
     },
     {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\man with glasses.jpg",
+      "PackagePath": "staticwebassets\\img\\man with glasses.jpg"
+    },
+    {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\math.jpg",
       "PackagePath": "staticwebassets\\img\\math.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\pair of shoes.jpg",
+      "PackagePath": "staticwebassets\\img\\pair of shoes.jpg"
     },
     {
       "Id": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\profile.jpg",
