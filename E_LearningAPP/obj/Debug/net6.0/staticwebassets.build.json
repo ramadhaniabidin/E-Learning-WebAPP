@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zGZTALqahD79gDN1EEhP2DFmKX4rcPI64+hL06Jv/HU=",
+  "Hash": "UvTNQzDGuGl6wg4iBQhqgHtI1KJXZM8HKiP5fHe3PO8=",
   "Source": "E_LearningAPP",
   "BasePath": "_content/E_LearningAPP",
   "Mode": "Default",
@@ -644,6 +644,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\math.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\math1.jfif",
+      "SourceId": "E_LearningAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\",
+      "BasePath": "_content/E_LearningAPP",
+      "RelativePath": "img/math1.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\math1.jfif"
     },
     {
       "Identity": "C:\\Users\\ramad\\OneDrive\\Documents\\Belajar\\MVC\\E_LearningAPP\\E_LearningAPP\\wwwroot\\img\\pair of shoes.jpg",
