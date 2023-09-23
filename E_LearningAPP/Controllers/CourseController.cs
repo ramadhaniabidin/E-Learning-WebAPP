@@ -10,6 +10,10 @@ namespace E_LearningAPP.Controllers
             return View();
         }
 
+        public IActionResult TestPage()
+        {
+            return View();
+        }
         //[Route("Course/Physics/{grade}")]
         //public IActionResult Physics(int grade)
         //{
