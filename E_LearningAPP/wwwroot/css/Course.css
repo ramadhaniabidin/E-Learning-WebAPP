@@ -9,6 +9,17 @@
     --circle-duration: calc(900ms * 100 / var(--animation-speed));
 }
 
+body{
+    background-color:rgb(80, 117, 208)
+}
+
+/*body{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/course background.jpg');
+    background-size: cover
+}*/
+
 .active, .accordion:hover {
     background-color: #ccc;
 }
