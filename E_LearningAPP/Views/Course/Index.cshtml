@@ -1,17 +1,18 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
+    <title>Course - Test Page</title>
 
     <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="~/css/Course.css"/>
+    @*<link rel="stylesheet" href="~/css/MasterPage.css" />*@
+    <link rel="stylesheet" href="~/css/Course.css" />
+
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/AngularJS/angular.min.js"></script>
@@ -21,6 +22,21 @@
 
 </head>
 <body ng-app="app" ng-controller="CourseController">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
 
     <header data-bs-theme="dark">
         <nav class="navbar navbar-dark fixed-top bg-dark" aria-label="Dark offcanvas navbar">
@@ -77,146 +93,163 @@
 
     </header>
 
-    <main>
-        <div class="row" style="padding-top: 5.5%">
-            <div class="col-md-4">
-                <div class="container" >
-                    <div class="card">
-                        <img src="~/img/download.jpg" width="100%" height="200" />
-                        
+    <main style="padding-top: 5.5%">
+        <section class="articles">
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="~/img/physics.jpg" />
+                    </figure>
+                    <div id="physics-parent" class="article-body">
+                        <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('physics')">Fisika</h2>
+                        <hr />
+                        <p>
+                            Pelajaran fisika membuka pintu rahasia alam dengan eksperimen seru dan teori mencengangkan.
+                            Temukan keajaiban di balik gaya-gaya misterius,
+                            gelombang tak terlihat, dan teknologi futuristik.
+                        </p>
+                        <hr />
+                        <div id="physics-panel" class="panel">
+                            <ul>
+                                <li>
+                                    <p ng-click="ToggleCurricullum1('physics', 10)" style="margin-bottom: 0px">Fisika Kelas 10</p>
+                                    <div id="physics-10-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Physics/K13/10">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Physics/KTSP/10">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('physics', 11)">Fisika Kelas 11</p>
+                                    <div id="physics-11-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Physics/K13/11">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Physics/KTSP/11">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('physics', 12)">Fisika Kelas 12</p>
+                                    <div id="physics-12-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Physics/K13/12">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Physics/KTSP/12">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
 
-                        <div class="card-body">
-                            <h5 style="cursor: pointer;" class="card-title" ng-click="ToggleAccordion('physics')">Fisika</h5>
-                            <hr style="margin-top: 0px; margin-bottom: 2.5%"/>
-                            <div id="physics-panel" class="panel" style="padding-left: 0px">
-                                <ul>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Physics/10">Fisika Kelas 10</a>*@
-                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 10)">Fisika Kelas 10</a>
-                                        <div id="physics-10-panel" class="curricullum" style="padding-left: 0px">
-                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                            <a class="grade-redirector" href="Course/Physics/K13/10">Fisika Kelas 10 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Physics/KTSP/10">Fisika Kelas 10 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Physics/11">Fisika Kelas 11</a>*@
-                                        <p style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 11)">Fisika Kelas 11</p>
-                                        <div id="physics-11-panel" class="curricullum" style="padding-left: 0px">
-                                            <a class="grade-redirector" href="Course/Physics/K13/11">Fisika Kelas 11 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Physics/KTSP/11">Fisika Kelas 11 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Physics/12">Fisika Kelas 12</a>*@
-                                        <p style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 12)">Fisika Kelas 12</p>
-                                        <div id="physics-12-panel" class="curricullum" style="padding-left: 0px">
-                                            <a class="grade-redirector" href="Course/Physics/K13/12">Fisika Kelas 12 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Physics/KTSP/12">Fisika Kelas 12 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p class="read-more" ng-click="ToggleAccordion('physics')">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="container">
-                    <div class="card">
-                        <img src="~/img/math.jpg" width="100%" height="200" />
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="~/img/math1.jfif" />
+                    </figure>
+                    <div class="article-body">
+                        <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('math')">Matematika</h2>
+                        <hr />
+                        <p>
+                            Matematika adalah kunci menuju pemahaman mendalam alam semesta, dari rumus rahasia hingga teka-teki menarik.
+                            Bergabunglah sekarang, dan mari bersama-sama menghadapi tantangan yang mengasah pikiran dan membuka pintu menuju prestasi luar biasa!
+                        </p>
+                        <hr />
+                        <div id="math-panel" class="panel">
+                            <ul>
+                                <li>
+                                    <p ng-click="ToggleCurricullum1('math', 10)" style="margin-bottom: 0px">Matematika Kelas 10</p>
+                                    <div id="math-10-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Math/K13/10">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Math/KTSP/10">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('math', 11)">Matematika Kelas 11</p>
+                                    <div id="math-11-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Math/K13/11">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Math/KTSP/11">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('math', 12)">Matematika Kelas 12</p>
+                                    <div id="math-12-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Math/K13/12">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Math/KTSP/12">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
 
-                        <div class="card-body">
-                            <h5 style="cursor: pointer" class="card-title" ng-click="ToggleAccordion('math')">Matematika</h5>
-                            <hr style="margin-top: 0px; margin-bottom: 2.5%" />
-                            <div id="math-panel" class="panel" style="padding-left: 0px">
-                                <ul>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Math/10">Matematika Kelas 10</a>*@
-                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('math', 10)">Matematika Kelas 10</a>
-                                        <div id="math-10-panel" class="curricullum" style="padding-left: 0px">
-                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                            <a class="grade-redirector" href="Course/Math/K13/10">Matematika Kelas 10 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Math/KTSP/10">Matematika Kelas 10 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Math/11">Matematika Kelas 11</a>*@
-                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('math', 11)">Matematika Kelas 11</a>
-                                        <div id="math-11-panel" class="curricullum" style="padding-left: 0px">
-                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                            <a class="grade-redirector" href="Course/Math/K13/11">Matematika Kelas 11 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Math/KTSP/11">Matematika Kelas 11 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Math/12">Matematika Kelas 12</a>*@
-                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('math', 12)">Matematika Kelas 12</a>
-                                        <div id="math-12-panel" class="curricullum" style="padding-left: 0px">
-                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                            <a class="grade-redirector" href="Course/Math/K13/12">Matematika Kelas 12 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Math/KTSP/12">Matematika Kelas 12 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p class="read-more" ng-click="ToggleAccordion('math')">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="container">
-                    <div class="card">
-                        <img src="~/img/chemistry.jpg" width="100%" height="200" />
-                        <div class="card-body">
-                            <h5 style="cursor: pointer" class="card-title" ng-click="ToggleAccordion('chemistry')">Kimia</h5>
-                            <hr style="margin-top: 0px; margin-bottom: 2.5%" />
-                            <div id="chemistry-panel" class="panel" style="padding-left: 0px">
-                                <ul>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Chemistry/10">Kimia Kelas 10</a>*@
-                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('chemistry', 10)">Kimia Kelas 10</a>
-                                        <div id="chemistry-10-panel" class="curricullum" style="padding-left: 0px">
-                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                            <a class="grade-redirector" href="Course/Chemistry/K13/10">Kimia Kelas 10 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Chemistry/KTSP/10">Kimia Kelas 10 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Chemistry/11">Kimia Kelas 11</a>*@
-                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('chemistry', 11)">Kimia Kelas 11</a>
-                                        <div id="chemistry-11-panel" class="curricullum" style="padding-left: 0px">
-                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                            <a class="grade-redirector" href="Course/Chemistry/K13/11">Kimia Kelas 11 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Chemistry/KTSP/11">Kimia Kelas 11 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        @*<a class="grade-redirector" href="Course/Chemistry/12">Kimia Kelas 12</a>*@
-                                        <a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('chemistry', 12)">Kimia Kelas 12</a>
-                                        <div id="chemistry-12-panel" class="curricullum" style="padding-left: 0px">
-                                            @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                            <a class="grade-redirector" href="Course/Chemistry/K13/12">Kimia Kelas 12 Kurikulum 2013</a>
-                                            <br />
-                                            <a class="grade-redirector" href="Course/Chemistry/KTSP/12">Kimia Kelas 12 Kurikulum KTSP</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="~/img/chemistry1.jpg" />
+                    </figure>
+                    <div class="article-body">
+                        <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('chemistry')">Kimia</h2>
+                        <hr />
+                        <p>
+                            Kimia adalah petualangan tak terlupakan dalam mengungkap misteri unsur-unsur yang menyusun segala sesuatu di sekitar kita.
+                            Jelajahi daya tarik kimia, dan rasakan sensasi keren di balik ledakan pengetahuan!
+                        </p>
+                        <hr />
+                        <div id="chemistry-panel" class="panel">
+                            <ul>
+                                <li>
+                                    <p ng-click="ToggleCurricullum1('chemistry', 10)" style="margin-bottom: 0px">Kimia Kelas 10</p>
+                                    <div id="chemistry-10-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Chemistry/K13/10">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Chemistry/KTSP/10">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('chemistry', 11)">Kimia Kelas 11</p>
+                                    <div id="chemistry-11-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Chemistry/K13/11">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Chemistry/KTSP/11">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('chemistry', 12)">Kimia Kelas 12</p>
+                                    <div id="chemistry-12-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Chemistry/K13/12">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Chemistry/KTSP/12">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+
+                        <p class="read-more" ng-click="ToggleAccordion('chemistry')">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
-
 </body>
 </html>

@@ -6,22 +6,73 @@ app.service('svc', function ($http) {
 
 app.controller('CourseController', function ($scope, svc) {
     $scope.ToggleAccordion = function (subject) {
-        var panel;
-        if (subject == 'physics') {
-            panel = document.getElementById('physics-panel');
-        }
-        else if (subject == 'math') {
-            panel = document.getElementById('math-panel');
-        }
-        else if (subject == 'chemistry') {
-            panel = document.getElementById('chemistry-panel');
-        }
+        console.log(subject);
+        var panel = document.getElementById(subject + '-panel');
+        var allPanels = document.querySelectorAll('.panel');
+
+        allPanels.forEach(function (otherPanel) {
+            if (otherPanel != panel) {
+                otherPanel.style.maxHeight = null;
+            }
+        });
 
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         }
         else {
             panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+    }
+
+    $scope.ToggleAccordion1 = function (subject) {
+        var panel = document.getElementById(subject + '-panel');
+        var allPanels = document.querySelectorAll('.panel');
+
+        allPanels.forEach(function (otherPanel) {
+            if (otherPanel != panel) {
+                otherPanel.style.maxHeight = null;
+            }
+        });
+
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        }
+        else {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+    }
+
+    $scope.ToggleCurricullum1 = function (subject, grade) {
+        var panel_id = (subject + '-' + grade + '-panel');
+        console.log('Selected panel id : ', panel_id);
+
+        var parentPanel = document.getElementById(subject + '-panel');
+        var panel = document.getElementById(panel_id);
+
+        console.log('Selected panel : ', panel)
+
+        var allCurrPanels = document.querySelectorAll('.curricullum');
+        allCurrPanels.forEach(function (item) {
+            if (item != panel) {
+                item.style.maxHeight = null;
+                item.style.marginBottom = null;
+            }
+        });
+
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.style.marginBottom = null;
+        }
+
+        else {
+            var parentMaxHeight = parentPanel.scrollHeight;
+            var childMaxHeight = panel.scrollHeight;
+            var totalMaxHeight = parentMaxHeight + childMaxHeight;
+
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+
+            panel.style.marginBottom = '2.5%';
+            parentPanel.style.maxHeight = totalMaxHeight + 'px';
         }
     }
 
@@ -87,7 +138,7 @@ app.controller('CourseController', function ($scope, svc) {
             }
         }
 
-        
+
         console.log(panel);
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
@@ -109,17 +160,6 @@ app.controller('CourseController', function ($scope, svc) {
 
             panel.style.marginBottom = '2.5%';
             parentPanel.style.maxHeight = totalMaxHeight + 'px';
-        }
-    };
-
-    $scope.ShowPhysicsAccordion = function () {
-        var panel = document.getElementById('panel1');
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        }
-
-        else {
-            panel.style.maxHeight = panel.scrollHeight + 'px';
         }
     };
 });
