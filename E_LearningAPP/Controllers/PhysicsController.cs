@@ -16,7 +16,7 @@ namespace E_LearningAPP.Controllers
         public IActionResult Topic(string topicName, string curr, int grade)
         {
             Console.WriteLine($"Curricullum = {curr}, Grade = {grade}, Topic = {topicName}");
-            return View($"/Views/Physics/{curr}/{grade}/Topics/{topicName}");
+            return View($"/Views/Physics/{curr}/{grade}/Topics/{topicName}.cshtml");
         }
     }
 }
