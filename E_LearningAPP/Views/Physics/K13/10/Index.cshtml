@@ -3,11 +3,195 @@
 *@
 
 @{
-    Layout = "MasterPage";
+    Layout = null;
 }
-<main>
-    <h1>Hi There</h1>
-    <h2>This is 10th grade Physics of 2013 Curricullum</h2>
-</main>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisika Kelas 10 - K13</title>
+
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    @*<link rel="stylesheet" href="~/css/MasterPage.css" />*@
+    <link rel="stylesheet" href="~/css/Common/subject.css" />
 
 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/AngularJS/angular.min.js"></script>
+    <script src="~/AngularJS/angular-filter.js"></script>
+    <script src="~/AngularJS/angular-route.js"></script>
+</head>
+<body>
+    <header data-bs-theme="dark">
+        <nav class="navbar navbar-dark fixed-top bg-dark" aria-label="Dark offcanvas navbar">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <p class="navbar-brand" href="#" ng-model="userName">{{userName}}</p>
+
+                <div style="width: auto" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">My E-Learning App</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <hr style="color:white; margin-top: 0px; margin-bottom: 0px" />
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="\Auth">
+                                    <i class="bx bx-home-alt-2" style="font-size: 1.25rem; color: white"></i>
+                                    <span style="padding-left: 5%">Halaman Awal</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="\Profile">
+                                    <i class="bx bx-user" style="font-size: 1.25rem; color: white"></i>
+                                    <span style="padding-left: 5%">Profil Anda</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">
+                                    <i class="bx bx-book-open" style="font-size: 1.25rem; color: white"></i>
+                                    <span style="padding-left: 5%">Mulai Belajar</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <br /><br /><br /><br /><br /><br />
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Cari</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+    </header>
+    <main style="padding-top: 5.5%">
+        <div class="ag-format-container">
+            <div class="ag-courses_box">
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            Pengukuran
+                        </div>
+                        <div class="ag-courses-item_date-box">
+                            Start:<span class="ag-courses-item_date">04.11.2022</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            Gerak Lurus Beraturan (GLBB)
+                        </div>
+                        <div class="ag-courses-item_date-box">
+                            Start:<span class="ag-courses-item_date">04.11.2022</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            Gerak Lurus Berubah Beraturan (GLBB)
+                        </div>
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">04.11.2022</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            Gerak Parabola (Gerak Peluru)
+                        </div>
+                        <div class="ag-courses-item_date-box">
+                            Start:<span class="ag-courses-item_date">04.11.2022</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            Gerak Melingkar
+                        </div>
+                        <div class="ag-courses-item_date-box">
+                            Start:<span class="ag-courses-item_date">30.11.2022</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            Hukum Newton Tentang Gerak (Dinamika)
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            Hukum Newton Tentang Gravitasi
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            Usaha dan Energi
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                31.10.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            Impuls dan Momentum
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                31.10.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
