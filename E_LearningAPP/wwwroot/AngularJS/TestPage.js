@@ -8,6 +8,13 @@ app.controller('TestPageController', function ($scope, svc) {
     $scope.ToggleAccordion = function (subject) {
         console.log(subject);
         var panel = document.getElementById(subject + '-panel');
+        var allPanels = document.querySelectorAll('.panel');
+
+        allPanels.forEach(function (otherPanel) {
+            if (otherPanel != panel) {
+                otherPanel.style.maxHeight = null;
+            }
+        });
 
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;

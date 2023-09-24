@@ -98,46 +98,41 @@
             <article>
                 <div class="article-wrapper">
                     <figure>
-                        @*<img src="https://picsum.photos/id/1011/800/450" alt="" />*@
                         <img src="~/img/physics.jpg"/>
                     </figure>
                     <div id="physics-parent" class="article-body">
                         <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('physics')">Fisika</h2>
                         <hr />
                         <p>
-                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, 
-                            euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. 
-                            Vestibulum ultrices iaculis enim imperdiet egestas.
+                            Pelajaran fisika membuka pintu rahasia alam dengan eksperimen seru dan teori mencengangkan.
+                            Temukan keajaiban di balik gaya-gaya misterius,
+                            gelombang tak terlihat, dan teknologi futuristik.
                         </p>
                         <hr />
                         <div id="physics-panel" class="panel">
                             <ul>
                                 <li>
                                     <p ng-click="ToggleCurricullum1('physics', 10)" style="margin-bottom: 0px">Fisika Kelas 10</p>
-                                    @*<a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 10)">Fisika Kelas 10</a>*@
                                     <div id="physics-10-panel" class="curricullum" style="padding-left: 0px">
-                                        @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
-                                        <a class="grade-redirector" href="/Course/Physics/K13/10">Kurikulum 2013</a>
+                                        <a href="/Course/Physics/K13/10">Kurikulum 2013</a>
                                         <br />
-                                        <a class="grade-redirector" href="/Course/Physics/KTSP/10">Kurikulum KTSP</a>
+                                        <a href="/Course/Physics/KTSP/10">Kurikulum KTSP</a>
                                     </div>
                                 </li>
                                 <li>
-                                    @*<a class="grade-redirector" href="Course/Physics/11">Fisika Kelas 11</a>*@
                                     <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('physics', 11)">Fisika Kelas 11</p>
                                     <div id="physics-11-panel" class="curricullum" style="padding-left: 0px">
-                                        <a class="grade-redirector" href="Course/Physics/K13/11">Kurikulum 2013</a>
+                                        <a href="/Course/Physics/K13/11">Kurikulum 2013</a>
                                         <br />
-                                        <a class="grade-redirector" href="Course/Physics/KTSP/11">Kurikulum KTSP</a>
+                                        <a href="/Course/Physics/KTSP/11">Kurikulum KTSP</a>
                                     </div>
                                 </li>
                                 <li>
-                                    @*<a class="grade-redirector" href="Course/Physics/12">Fisika Kelas 12</a>*@
                                     <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('physics', 12)">Fisika Kelas 12</p>
                                     <div id="physics-12-panel" class="curricullum" style="padding-left: 0px">
-                                        <a class="grade-redirector" href="Course/Physics/K13/12">Kurikulum 2013</a>
+                                        <a href="/Course/Physics/K13/12">Kurikulum 2013</a>
                                         <br />
-                                        <a class="grade-redirector" href="Course/Physics/KTSP/12">Kurikulum KTSP</a>
+                                        <a href="/Course/Physics/KTSP/12">Kurikulum KTSP</a>
                                     </div>
                                 </li>
                             </ul>
@@ -161,9 +156,8 @@
                         <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('math')">Matematika</h2>
                         <hr />
                         <p>
-                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
-                            euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta.
-                            Vestibulum ultrices iaculis enim imperdiet egestas.
+                            Matematika adalah kunci menuju pemahaman mendalam alam semesta, dari rumus rahasia hingga teka-teki menarik.
+                            Bergabunglah sekarang, dan mari bersama-sama menghadapi tantangan yang mengasah pikiran dan membuka pintu menuju prestasi luar biasa!
                         </p>
                         <hr />
                         <div id="math-panel" class="panel">
@@ -171,25 +165,25 @@
                                 <li>
                                     <p ng-click="ToggleCurricullum1('math', 10)" style="margin-bottom: 0px">Matematika Kelas 10</p>
                                     <div id="math-10-panel" class="curricullum" style="padding-left: 0px">
-                                        <a href="/Course/Physics/K13/10">Kurikulum 2013</a>
+                                        <a href="/Course/Math/K13/10">Kurikulum 2013</a>
                                         <br />
-                                        <a href="/Course/Physics/KTSP/10">Kurikulum KTSP</a>
+                                        <a href="/Course/Math/KTSP/10">Kurikulum KTSP</a>
                                     </div>
                                 </li>
                                 <li>
                                     <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('math', 11)">Matematika Kelas 11</p>
                                     <div id="math-11-panel" class="curricullum" style="padding-left: 0px">
-                                        <a href="/Course/Physics/K13/11">Kurikulum 2013</a>
+                                        <a href="/Course/Math/K13/11">Kurikulum 2013</a>
                                         <br />
-                                        <a href="/Course/Physics/KTSP/11">Kurikulum KTSP</a>
+                                        <a href="/Course/Math/KTSP/11">Kurikulum KTSP</a>
                                     </div>
                                 </li>
                                 <li>
                                     <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('math', 12)">Matematika Kelas 12</p>
                                     <div id="math-12-panel" class="curricullum" style="padding-left: 0px">
-                                        <a href="/Course/Physics/K13/12">Kurikulum 2013</a>
+                                        <a href="/Course/Math/K13/12">Kurikulum 2013</a>
                                         <br />
-                                        <a href="/Course/Physics/KTSP/12">Kurikulum KTSP</a>
+                                        <a href="/Course/Math/KTSP/12">Kurikulum KTSP</a>
                                     </div>
                                 </li>
                             </ul>
@@ -207,20 +201,51 @@
             <article>
                 <div class="article-wrapper">
                     <figure>
-                        @*<img src="https://picsum.photos/id/103/800/450" alt="" />*@
-                        <img src="~/img/math1.jfif" alt="" />
+                        <img src="~/img/chemistry1.jpg" />
                     </figure>
                     <div class="article-body">
-                        <h2>Matematika</h2>
+                        <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('chemistry')">Kimia</h2>
+                        <hr />
                         <p>
-                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                            Kimia adalah petualangan tak terlupakan dalam mengungkap misteri unsur-unsur yang menyusun segala sesuatu di sekitar kita.
+                            Jelajahi daya tarik kimia, dan rasakan sensasi keren di balik ledakan pengetahuan!
                         </p>
-                        <a href="#" class="read-more">
+                        <hr />
+                        <div id="chemistry-panel" class="panel">
+                            <ul>
+                                <li>
+                                    <p ng-click="ToggleCurricullum1('chemistry', 10)" style="margin-bottom: 0px">Kimia Kelas 10</p>
+                                    <div id="chemistry-10-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Chemistry/K13/10">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Chemistry/KTSP/10">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('chemistry', 11)">Kimia Kelas 11</p>
+                                    <div id="chemistry-11-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Chemistry/K13/11">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Chemistry/KTSP/11">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('chemistry', 12)">Kimia Kelas 12</p>
+                                    <div id="chemistry-12-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Chemistry/K13/12">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Chemistry/KTSP/12">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="read-more" ng-click="ToggleAccordion('chemistry')">
                             Read more <span class="sr-only">about this is some title</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
-                        </a>
+                        </p>
                     </div>
                 </div>
             </article>
