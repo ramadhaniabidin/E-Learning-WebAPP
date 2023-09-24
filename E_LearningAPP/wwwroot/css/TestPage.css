@@ -10,6 +10,7 @@
     transform-origin: center;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
+    cursor: pointer;
 }
 
     article a::after {
@@ -17,7 +18,14 @@
         inset-block: 0;
         inset-inline: 0;
         cursor: pointer;
-        content: "";
+        /*content: "";*/
+    }
+
+    article p::after {
+        position: absolute;
+        inset-block: 0;
+        inset-inline: 0;
+        cursor: pointer;
     }
 
     /* basic article elements styling */
@@ -60,6 +68,28 @@ article a {
     }
 
     article a .icon {
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        transform: translateX(var(--link-icon-translate));
+        opacity: var(--link-icon-opacity);
+        transition: all 0.3s;
+    }
+
+
+article p {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #28666e;
+}
+
+    article p:focus {
+        outline: 1px dotted #28666e;
+    }
+
+    article p .icon {
         min-width: 24px;
         width: 24px;
         height: 24px;
@@ -150,6 +180,14 @@ body {
 }
 
 .panel {
+    /*padding: 0 18px;*/
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.curricullum {
     padding: 0 18px;
     background-color: white;
     max-height: 0;

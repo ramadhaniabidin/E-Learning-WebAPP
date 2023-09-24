@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     @*<link rel="stylesheet" href="~/css/MasterPage.css" />*@
-
+    <link rel="stylesheet" href="~/css/TestPage.css" />
 
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/AngularJS/angular.min.js"></script>
     <script src="~/AngularJS/angular-filter.js"></script>
     <script src="~/AngularJS/angular-route.js"></script>
-    <script src="~/AngularJS/Home.js"></script>
+    <script src="~/AngularJS/TestPage.js"></script>
 
 </head>
-<body ng-app="app" ng-controller="HomeController">
+<body ng-app="app" ng-controller="TestPageController">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="check2" viewBox="0 0 16 16">
             <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
@@ -37,7 +37,7 @@
             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
         </symbol>
     </svg>
-
+        
     <header data-bs-theme="dark">
         <nav class="navbar navbar-dark fixed-top bg-dark" aria-label="Dark offcanvas navbar">
             <div class="container-fluid">
@@ -92,5 +92,139 @@
 
 
     </header>
+
+    <main style="padding-top: 5.5%">
+        <section class="articles">
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        @*<img src="https://picsum.photos/id/1011/800/450" alt="" />*@
+                        <img src="~/img/physics.jpg"/>
+                    </figure>
+                    <div id="physics-parent" class="article-body">
+                        <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('physics')">Fisika</h2>
+                        <hr />
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, 
+                            euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. 
+                            Vestibulum ultrices iaculis enim imperdiet egestas.
+                        </p>
+                        <hr />
+                        <div id="physics-panel" class="panel">
+                            <ul>
+                                <li>
+                                    <p ng-click="ToggleCurricullum1('physics', 10)" style="margin-bottom: 0px">Fisika Kelas 10</p>
+                                    @*<a style="margin-bottom: 0px;" class="grade-redirector" ng-click="ToggleCurricullum('physics', 10)">Fisika Kelas 10</a>*@
+                                    <div id="physics-10-panel" class="curricullum" style="padding-left: 0px">
+                                        @*<a class="anchor">Fisika Kelas 10 Kurikulum 2013</a>*@
+                                        <a class="grade-redirector" href="/Course/Physics/K13/10">Kurikulum 2013</a>
+                                        <br />
+                                        <a class="grade-redirector" href="/Course/Physics/KTSP/10">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    @*<a class="grade-redirector" href="Course/Physics/11">Fisika Kelas 11</a>*@
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('physics', 11)">Fisika Kelas 11</p>
+                                    <div id="physics-11-panel" class="curricullum" style="padding-left: 0px">
+                                        <a class="grade-redirector" href="Course/Physics/K13/11">Kurikulum 2013</a>
+                                        <br />
+                                        <a class="grade-redirector" href="Course/Physics/KTSP/11">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    @*<a class="grade-redirector" href="Course/Physics/12">Fisika Kelas 12</a>*@
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('physics', 12)">Fisika Kelas 12</p>
+                                    <div id="physics-12-panel" class="curricullum" style="padding-left: 0px">
+                                        <a class="grade-redirector" href="Course/Physics/K13/12">Kurikulum 2013</a>
+                                        <br />
+                                        <a class="grade-redirector" href="Course/Physics/KTSP/12">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="read-more" ng-click="ToggleAccordion('physics')">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="~/img/math1.jfif" />
+                    </figure>
+                    <div class="article-body">
+                        <h2 style="margin-bottom: 0px" ng-click="ToggleAccordion('math')">Matematika</h2>
+                        <hr />
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
+                            euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta.
+                            Vestibulum ultrices iaculis enim imperdiet egestas.
+                        </p>
+                        <hr />
+                        <div id="math-panel" class="panel">
+                            <ul>
+                                <li>
+                                    <p ng-click="ToggleCurricullum1('math', 10)" style="margin-bottom: 0px">Matematika Kelas 10</p>
+                                    <div id="math-10-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Physics/K13/10">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Physics/KTSP/10">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('math', 11)">Matematika Kelas 11</p>
+                                    <div id="math-11-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Physics/K13/11">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Physics/KTSP/11">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="margin-bottom: 0px;" ng-click="ToggleCurricullum1('math', 12)">Matematika Kelas 12</p>
+                                    <div id="math-12-panel" class="curricullum" style="padding-left: 0px">
+                                        <a href="/Course/Physics/K13/12">Kurikulum 2013</a>
+                                        <br />
+                                        <a href="/Course/Physics/KTSP/12">Kurikulum KTSP</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="read-more" ng-click="ToggleAccordion('math')">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        @*<img src="https://picsum.photos/id/103/800/450" alt="" />*@
+                        <img src="~/img/math1.jfif" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>Matematika</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
