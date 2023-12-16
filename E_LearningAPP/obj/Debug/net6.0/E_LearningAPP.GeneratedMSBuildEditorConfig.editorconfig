@@ -9,149 +9,151 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = E_LearningAPP
 build_property.RootNamespace = E_LearningAPP
-build_property.ProjectDir = C:\Users\ramad\OneDrive\Documents\Belajar\MVC\E_LearningAPP\E_LearningAPP\
+build_property.ProjectDir = C:\Users\USER\Documents\GitHub\E-Learning-WebAPP\E_LearningAPP\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ramad\OneDrive\Documents\Belajar\MVC\E_LearningAPP\E_LearningAPP
+build_property.MSBuildProjectDirectory = C:\Users\USER\Documents\GitHub\E-Learning-WebAPP\E_LearningAPP
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Auth/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Auth/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Bin/Course/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Bin/Course/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluXENvdXJzZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Bin/Course/TestPage.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Bin/Course/TestPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluXENvdXJzZVxUZXN0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Chemistry/K13/10/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Chemistry/K13/10/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlbWlzdHJ5XEsxM1wxMFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Chemistry/K13/11/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Chemistry/K13/11/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlbWlzdHJ5XEsxM1wxMVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Chemistry/K13/12/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Chemistry/K13/12/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlbWlzdHJ5XEsxM1wxMlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Chemistry/KTSP/10/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Chemistry/KTSP/10/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlbWlzdHJ5XEtUU1BcMTBcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Chemistry/KTSP/11/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Chemistry/KTSP/11/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlbWlzdHJ5XEtUU1BcMTFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Chemistry/KTSP/12/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Chemistry/KTSP/12/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlbWlzdHJ5XEtUU1BcMTJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Course/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Course/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Course/Physics.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Course/Physics.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXFBoeXNpY3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Course/PhysicsSelected.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Course/PhysicsSelected.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXFBoeXNpY3NTZWxlY3RlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Course/TestPage.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Course/TestPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXFRlc3RQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Home/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Home/Privacy.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Math/K13/10/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Math/K13/10/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0aFxLMTNcMTBcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Math/K13/11/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Math/K13/11/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0aFxLMTNcMTFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Math/K13/12/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Math/K13/12/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0aFxLMTNcMTJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Math/KTSP/10/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Math/KTSP/10/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0aFxLVFNQXDEwXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Math/KTSP/11/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Math/KTSP/11/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0aFxLVFNQXDExXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Math/KTSP/12/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Math/KTSP/12/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0aFxLVFNQXDEyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Physics/K13/10/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Physics/K13/10/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGh5c2ljc1xLMTNcMTBcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Physics/K13/10/Topics/Pengukuran.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Physics/K13/10/Topics/Pengukuran.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGh5c2ljc1xLMTNcMTBcVG9waWNzXFBlbmd1a3VyYW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Physics/K13/11/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Physics/K13/11/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGh5c2ljc1xLMTNcMTFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Physics/K13/12/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Physics/K13/12/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGh5c2ljc1xLMTNcMTJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Physics/KTSP/10/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Physics/KTSP/10/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGh5c2ljc1xLVFNQXDEwXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Physics/KTSP/11/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Physics/KTSP/11/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGh5c2ljc1xLVFNQXDExXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Physics/KTSP/12/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Physics/KTSP/12/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGh5c2ljc1xLVFNQXDEyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Profile/Index.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Shared/Error.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Shared/MasterPage.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Shared/MasterPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1hc3RlclBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/_ViewImports.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/_ViewStart.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramad/OneDrive/Documents/Belajar/MVC/E_LearningAPP/E_LearningAPP/Views/Shared/_Layout.cshtml]
+[C:/Users/USER/Documents/GitHub/E-Learning-WebAPP/E_LearningAPP/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-unai7ki775
