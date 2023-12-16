@@ -7,11 +7,9 @@ var length = document.getElementById("length");
 myInput.onfocus = function () {
     document.getElementById("message").style.display = "block";
 }
-
 myInput.onblur = function () {
     document.getElementById("message").style.display = "none";
 }
-
 myInput.onkeyup = function () {
     var lowerCaseLetters = /[a-z]/g;
     if (myInput.value.match(lowerCaseLetters)) {
@@ -49,8 +47,6 @@ myInput.onkeyup = function () {
         length.classList.add("invalid");
     }
 }
-
-
 function validate_password() {
     var password = document.getElementById("psw").value;
     var confirm = document.getElementById("confirm_psw").value;

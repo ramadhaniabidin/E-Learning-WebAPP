@@ -4,7 +4,7 @@ app.service('svc', function ($http) {
     this.svc_GetLoginToken = function (username, password, role_id) {
         //var response = $http({
         //    method: "POST",
-        //    url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetLoginToken/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+        //    url: 'https://192.168.1.7:7290/E-LearningAPI/Account/GetLoginToken/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
         //    data: {},
         //    contentType: 'application/json; charset=utf-8',
         //    dataType: 'json'
@@ -17,7 +17,7 @@ app.service('svc', function ($http) {
 
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.3:7290/E-learningAPI/Account/GetLoginToken',
+            url: 'https://192.168.1.7:7290/E-learningAPI/Account/GetLoginToken',
             data: param,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -27,11 +27,10 @@ app.service('svc', function ($http) {
 
         return response;
     }
-
     this.svc_GetAccountID = function (username, password) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+            url: 'https://192.168.1.7:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -39,11 +38,10 @@ app.service('svc', function ($http) {
 
         return response;
     }
-
     this.svc_GetAccountByUsername = function (username) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.3:7290/E-learningAPI/Account/GetAccountByUsername/username/' + encodeURIComponent(username),
+            url: 'https://192.168.1.7:7290/E-learningAPI/Account/GetAccountByUsername/username/' + encodeURIComponent(username),
             data: {},
             contentType: 'aplication/json charset=utf-8',
             dataType: 'json'
@@ -51,11 +49,10 @@ app.service('svc', function ($http) {
 
         return response;
     }
-
     this.svc_UpdatePassword = function (username, password) {
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.3:7290/E-learningAPI/Account/UpdatePassword/username/' + encodeURIComponent(username) + '/newPassword/' + encodeURIComponent(password),
+            url: 'https://192.168.1.7:7290/E-learningAPI/Account/UpdatePassword/username/' + encodeURIComponent(username) + '/newPassword/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json charset=utf-8',
             dataType: 'json'
@@ -63,11 +60,10 @@ app.service('svc', function ($http) {
 
         return response;
     }
-
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.3:7290/E-LearningAPI/Account/GetAllAccounts',
+            url: 'https://192.168.1.7:7290/E-LearningAPI/Account/GetAllAccounts',
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -75,7 +71,6 @@ app.service('svc', function ($http) {
 
         return response;
     }
-
     this.svc_CreateAccount = function (account) {
         var param = {
             account: account
@@ -85,7 +80,7 @@ app.service('svc', function ($http) {
 
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.3:7290/E-learningAPI/Account/CreateAccount',
+            url: 'https://192.168.1.7:7290/E-learningAPI/Account/CreateAccount',
             data: account,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -93,7 +88,18 @@ app.service('svc', function ($http) {
 
         return response;
     }
-})
+    this.svc_TestFunction = function () {
+        var response = $http({
+            method: 'GET',
+            url: 'https://192.168.1.7:7290/E-learningAPI/Test/TestMethod',
+            data: {},
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        });
+
+        return response;
+    };
+});
 
 app.controller('AuthController', function ($scope, svc) {
     $scope.accounts = [];
@@ -550,11 +556,15 @@ app.controller('AuthController', function ($scope, svc) {
     $scope.ShowModal = function () {
         document.getElementById("my_modal_1").style.display = "block";
     }
+    $scope.TestFunction = function () {
+        let promise = svc.svc_TestFunction();
+        promise.then(function (response) {
+            //let jsonData = JSON.parse(response.data);
+            console.log("JSON Data = ", response.data);
+        });
+    }
 
-    //$scope.GetAccounts();
-    //$scope.$watch('AccountType', function (newVal, oldVal) {
-    //    if (newVal) {
-    //        console.log("Account type: ", newVal);
-    //    }
-    //});
+    // Call the defined functions here
+    $scope.TestFunction();
+    //
 })
