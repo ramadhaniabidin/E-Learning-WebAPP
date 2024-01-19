@@ -4,7 +4,7 @@ app.service('svc', function ($http) {
     this.svc_GetLoginToken = function (username, password, role_id) {
         //var response = $http({
         //    method: "POST",
-        //    url: 'https://192.168.1.7:7290/E-LearningAPI/Account/GetLoginToken/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+        //    url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Account/GetLoginToken/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
         //    data: {},
         //    contentType: 'application/json; charset=utf-8',
         //    dataType: 'json'
@@ -17,7 +17,7 @@ app.service('svc', function ($http) {
 
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.7:7290/E-learningAPI/Account/GetLoginToken',
+            url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Account/GetLoginToken',
             data: param,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -30,7 +30,7 @@ app.service('svc', function ($http) {
     this.svc_GetAccountID = function (username, password) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.7:7290/E-LearningAPI/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
+            url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Account/GetAccountID/username/' + encodeURIComponent(username) + '/password/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -41,7 +41,7 @@ app.service('svc', function ($http) {
     this.svc_GetAccountByUsername = function (username) {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.7:7290/E-learningAPI/Account/GetAccountByUsername/username/' + encodeURIComponent(username),
+            url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Account/GetAccountByUsername/username/' + encodeURIComponent(username),
             data: {},
             contentType: 'aplication/json charset=utf-8',
             dataType: 'json'
@@ -52,7 +52,7 @@ app.service('svc', function ($http) {
     this.svc_UpdatePassword = function (username, password) {
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.7:7290/E-learningAPI/Account/UpdatePassword/username/' + encodeURIComponent(username) + '/newPassword/' + encodeURIComponent(password),
+            url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Account/UpdatePassword/username/' + encodeURIComponent(username) + '/newPassword/' + encodeURIComponent(password),
             data: {},
             contentType: 'application/json charset=utf-8',
             dataType: 'json'
@@ -63,7 +63,7 @@ app.service('svc', function ($http) {
     this.svc_GetAllAccounts = function () {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.7:7290/E-LearningAPI/Account/GetAllAccounts',
+            url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Account/GetAllAccounts',
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -80,7 +80,7 @@ app.service('svc', function ($http) {
 
         var response = $http({
             method: 'POST',
-            url: 'https://192.168.1.7:7290/E-learningAPI/Account/CreateAccount',
+            url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Account/CreateAccount',
             data: account,
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
@@ -91,7 +91,7 @@ app.service('svc', function ($http) {
     this.svc_TestFunction = function () {
         var response = $http({
             method: 'GET',
-            url: 'https://192.168.1.7:7290/E-learningAPI/Test/TestMethod',
+            url: 'https://192.168.1.4:7050/E-Learning/BackEnd/Test/TestMethod',
             data: {},
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E_LearningAPP", "E_LearningAPP\E_LearningAPP.csproj", "{34CDE32E-56EE-4824-B0C4-D8701F7D270A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Learning.API", "..\..\.NET Web API\E-Learning-API\E-Learning.API\E-Learning.API.csproj", "{5D99E610-E9AE-462B-BF76-101EC4BABA58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-LearningAPP.BackEnd", "E-LearningAPP.BackEnd\E-LearningAPP.BackEnd.csproj", "{98C451C3-C93C-426C-9968-9895809F9F38}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Learning.Logics", "..\..\.NET Web API\E-Learning-API\E-Learning.Logics\E-Learning.Logics.csproj", "{B566216A-A52E-4A79-A7E3-928B7C48D22F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-LearningAPP.BackEnd.Logics", "E-LearningAPP.BackEnd.Logics\E-LearningAPP.BackEnd.Logics.csproj", "{4D7D00E9-2799-4205-A0BB-18004A2AA2E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{34CDE32E-56EE-4824-B0C4-D8701F7D270A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34CDE32E-56EE-4824-B0C4-D8701F7D270A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34CDE32E-56EE-4824-B0C4-D8701F7D270A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D99E610-E9AE-462B-BF76-101EC4BABA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D99E610-E9AE-462B-BF76-101EC4BABA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D99E610-E9AE-462B-BF76-101EC4BABA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D99E610-E9AE-462B-BF76-101EC4BABA58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B566216A-A52E-4A79-A7E3-928B7C48D22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B566216A-A52E-4A79-A7E3-928B7C48D22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B566216A-A52E-4A79-A7E3-928B7C48D22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B566216A-A52E-4A79-A7E3-928B7C48D22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C451C3-C93C-426C-9968-9895809F9F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C451C3-C93C-426C-9968-9895809F9F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C451C3-C93C-426C-9968-9895809F9F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C451C3-C93C-426C-9968-9895809F9F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D7D00E9-2799-4205-A0BB-18004A2AA2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7D00E9-2799-4205-A0BB-18004A2AA2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7D00E9-2799-4205-A0BB-18004A2AA2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7D00E9-2799-4205-A0BB-18004A2AA2E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
