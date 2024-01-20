@@ -49,6 +49,110 @@
       "PackagePath": "staticwebassets\\AngularJS\\sharedService.js"
     },
     {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\brands.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\regular.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\solid.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\FontAwesome\\css\\v5-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\FontAwesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\FontAwesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
       "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\css\\Auth\\Auth.css",
       "PackagePath": "staticwebassets\\css\\Auth\\Auth.css"
     },
@@ -71,6 +175,10 @@
     {
       "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\css\\Home\\carousel.css",
       "PackagePath": "staticwebassets\\css\\Home\\carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\css\\Login\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login\\Login.css"
     },
     {
       "Id": "C:\\Users\\USER\\Documents\\GitHub\\E-Learning-WebAPP\\E_LearningAPP\\wwwroot\\css\\MasterPage.css",

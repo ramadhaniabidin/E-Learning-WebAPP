@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@{
+    Layout = null;
+}
+
+@model SignUpModel;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    @* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> *@
+    <link rel="stylesheet" href="~/FontAwesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/FontAwesome/css/solid.min.css">
+    <link rel="stylesheet" href="~/css/Login/Login.css">
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/Auth/latis.css"/>  
+
+    <script src="~/AngularJS/angular.min.js"></script>
+    <script src="~/AngularJS/angular-filter.js"></script>
+    <script src="~/AngularJS/angular-route.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    ADMIN PANEL
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-control-label">USERNAME</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">PASSWORD</label>
+                                <input type="password" class="form-control" i>
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text">
+                                    <!-- Error Message -->
+                                </div>
+                                <div class="col-lg-12 login-btm login-button">                                    
+                                    <a class="btn btn-outline-primary">Does not have an account? Register Here</a>
+                                    <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
